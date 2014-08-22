@@ -244,32 +244,32 @@ img.appstore {
 .feature-item .feature h4 {
   margin-top: 18px;
 }
-#pennies_mc_embed_signup {
+#mc_embed_signup {
   margin-top: 46px;
 }
-#pennies_mc_embed_signup ::-webkit-input-placeholder {
+#mc_embed_signup ::-webkit-input-placeholder {
   color: #000000;
 }
-#pennies_mc_embed_signup :-moz-placeholder {
+#mc_embed_signup :-moz-placeholder {
   /* Firefox 18- */
 
   color: #000000;
 }
-#pennies_mc_embed_signup ::-moz-placeholder {
+#mc_embed_signup ::-moz-placeholder {
   /* Firefox 19+ */
 
   color: #000000;
 }
-#pennies_mc_embed_signup :-ms-input-placeholder {
+#mc_embed_signup :-ms-input-placeholder {
   color: #000000;
 }
-#pennies_mc_embed_signup input:-webkit-autofill {
+#mc_embed_signup input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
-#pennies_mc_embed_signup input:-webkit-autofill:focus {
+#mc_embed_signup input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px #ffffff inset, 0 0 8px rgba(82, 168, 236, 0);
 }
-#pennies_mc_embed_signup input {
+#mc_embed_signup input {
   display: block;
   margin: 14px auto;
   padding: 26px 0;
