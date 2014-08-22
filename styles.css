@@ -280,6 +280,69 @@ img.appstore {
   font-size: 24px;
   text-align: center;
 }
+#mc_embed_signup input[type="email"],
+#mc_embed_signup input[type="submit"] {
+  width: 500px;
+}
+#mc_embed_signup input[type="submit"] {
+  border-color: #f8ec7a;
+  background-color: #f8ec7a;
+}
+#mc_embed_signup input[type="submit"]:hover {
+  border-color: #f7e252;
+  background-color: #f7e252;
+}
+#mc_embed_signup textarea:focus,
+#mc_embed_signup input:focus {
+  outline: 0;
+}
+#mc_embed_signup *:focus {
+  outline: 0;
+}
+#mc_embed_signup.dark input {
+  border-color: #000000;
+  background-color: #f8ec7a;
+  color: #000000!important;
+}
+#mc_embed_signup.dark input[type="submit"] {
+  border-color: #000000;
+  background-color: #000000;
+  color: #ffffff !important;
+}
+#mc_embed_signup.dark input[type="submit"]:hover {
+  border-color: #000000;
+  background-color: #262626;
+  color: #000000;
+}
+#mc_embed_signup.dark input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #f8ec7a inset;
+}
+#mc_embed_signup.dark input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #f8ec7a inset, 0 0 8px rgba(82, 168, 236, 0);
+}
+ul.social {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  float: right;
+}
+ul.social a {
+  font-size: 15px;
+}
+ul.social i {
+  position: relative;
+  top: 4px;
+  margin-right: 2px;
+  font-size: 20px;
+  color: #52b1ea;
+}
+ul.social li {
+  display: inline;
+  margin: 0 10px;
+}
+ul.social.center {
+  float: none;
+}
 .header-link {
   position: relative;
   top: 120px;
