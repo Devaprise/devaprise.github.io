@@ -3,8 +3,115 @@
   <head>
     <meta charset="UTF-8">
     <title>Testing Processing</title>
+    <script src="processing.min.js"></script>
   </head>
   <body>
     <h1>The test</h1>
+    <script type="application/processing" data-processing-target="pjsa">
+    void setup() {
+    size(400,400);
+    frameRate(30);
+    background(0,0,0,0)
+    }
+    var drawPlayer = function(x,y){
+        noStroke();
+        translate(x,y);
+        scale(1/7);
+        fill(255, 204, 0);// hair color
+        //layer 1(top)
+        rect(manx + allsize/27, many - allsize/1.06, allsize/4.25, why);
+        //layer 2
+        rect(manx - allsize/2.6, many - allsize/1.15, allsize/1.625, why);
+        //layer 3
+        rect(manx - allsize/2.6, many - allsize/1.26, allsize/3.25, why);
+        fill(237, 213, 118); //skin color
+        rect(manx - allsize/13, many - allsize/1.26, allsize/13, why);
+        fill(0, 0, 0);
+        rect(manx - allsize/390, many - allsize/1.26, allsize/13, why);
+        fill(237, 213, 118);
+        rect(manx + allsize/12.6, many - allsize/1.26, allsize/13, why);
+      
+        
+        //layer 3
+        fill(255, 204, 0);
+        rect(manx - allsize/2.16, many - allsize/1.39, allsize/2.6, why);
+        fill(237, 213, 118);
+        rect(manx - allsize/13, many - allsize/1.39, allsize/13, why);
+        fill(0, 0, 0);
+        rect(manx - allsize/390, many - allsize/1.39, allsize/13, why);
+        fill(237, 213, 118);
+        rect(manx + allsize/12.6, many - allsize/1.39, allsize/4.333333, why);
+        //layer 4
+        fill(255, 204, 0);
+        rect(manx - allsize/2.16, many - allsize/1.56, allsize/4.333333, why);
+        rect(manx - allsize/6.4, many - allsize/1.56, allsize/13, why);
+        fill(237, 213, 118);
+        rect(manx - allsize/4.3, many - allsize/1.56, allsize/13, why);
+        rect(manx - allsize/13, many - allsize/1.56, allsize/2.16666667, why);
+        //layer 5
+        fill(255, 204, 0);
+        rect(manx - allsize/2.16, many - allsize/1.77, allsize/4.333333, why);
+        fill(237, 213, 118);
+        rect(manx - allsize/4.3, many - allsize/1.77, allsize/3.25, why);
+        fill(204, 164, 138);//lip color
+        rect(manx + allsize/12.6, many - allsize/1.77, allsize/4.333333, why);
+        //layer 6
+        fill(255, 204, 0);
+        rect(manx - allsize/3.23, many - allsize/2.05, allsize/13, why);
+        fill(237, 213, 118);
+        rect(manx - allsize/4.3, many - allsize/2.05, allsize/2.16666667, why);
+        // body layer 1 (from neck)
+        rect(manx - allsize/2.6, many - allsize/2.43, allsize/2.16666667, why);
+        // body layer 2 
+        rect(manx - allsize/2.16, many - allsize/2.98, allsize/1.3, why);
+        // body layer 3
+        rect(manx - allsize/1.86, many - allsize/3.9, allsize/1.08333333, why);
+        // body layer 4
+        rect(manx - allsize/1.86, many - allsize/5.5, allsize/6.5, why);
+        rect(manx + allsize/4.29, many - allsize/5.5, allsize/6.5, why);
+        rect(manx - allsize/3.23, many - allsize/5.5, allsize/2.16666667, why);
+        //hands (layers 5/6)
+        rect(manx - allsize/1.86, many - allsize/9.55, allsize/4.333333, why);
+        rect(manx + allsize/6.4, many - allsize/9.55, allsize/4.333333, why);
+        rect(manx - allsize/1.86, many - allsize/42, allsize/6.5, why);
+        rect(manx + allsize/4.29, many - allsize/42, allsize/6.5, why);
+        // swimtrunks (layers 6/7/8)
+        fill(179, 23, 23);
+        rect(manx - allsize/3.23, many - allsize/9.55, allsize/2.16666667, why);
+        rect(manx - allsize/3.23, many - allsize/42, allsize/2.16666667, why);
+        rect(manx - allsize/2.6, many + allsize/18.7, allsize/4.333333, why);
+        rect(manx - allsize/390, many + allsize/18.7,allsize/4.333333 , why);
+        rect(manx - allsize/2.16, many + allsize/7.8, allsize/4.333333, why);
+        rect(manx + allsize/12.6, many + allsize/7.8, allsize/4.333333, why);
+        // feet (last layer)
+        fill(237, 213, 118);
+        rect(manx - allsize/1.86, many + allsize/5, allsize/3.25, why);
+        rect(manx + allsize/12.6, many + allsize/5, allsize/3.25, why);
+        resetMatrix();
+        //surfboard 
+        noStroke();
+        translate(x,y-8);
+        scale(1/7);
+        fill(255, 132, 0);
+        rect(105, 300, 162, 30);
+        fill(0, 255, 51);
+        rect(105, 292.5, 161, 7.5);
+        rect(105, 329.5, 161, 7.5);
+        rect(266, 293, 7.5, 45);
+        rect(98, 293, 7.5, 45);
+        rect(274, 293, 7.5, 45.0);
+        rect(90, 293, 7.5, 45.0);
+        rect(282, 305, 7.5, 22.5);
+        rect(82, 305, 7.5, 22.5);
+        fill(255, 255, 255);
+        rect(134, 314, 15 * 7, 3);
+        resetMatrix();
+    };
+    void draw(){
+      background(0,0,255);
+      drawPlayer(mouseX-29,265);
+    }
+};
+  </script>
   </body>
 </html>
