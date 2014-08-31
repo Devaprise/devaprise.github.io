@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <title>Testing Processing</title>
     <script src="processing.min.js"></script>
-  </head>
-  <body>
-    <h1>The test</h1>
-    <script type="application/processing" data-processing-target="pjsa">
+    <script type="application/processing" data-processing-target="pjs">
     void setup() {
     size(400,400);
     frameRate(30);
@@ -110,8 +107,11 @@
     void draw(){
       background(0,0,255);
       drawPlayer(mouseX-29,265);
-    }
-};
+    };
   </script>
+  </head>
+  <body>
+    <h1>The test</h1>
+  <canvas id="pjs"></canvas>
   </body>
 </html>
