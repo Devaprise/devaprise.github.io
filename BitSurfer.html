@@ -51,19 +51,28 @@
          currency: "dogecoin",
          counter: "count",
          alignment: "bl",
-         qrcode: true,
+         qrcode: false,
          auto_show: false,
          lbl_button: "Tip Dogecoin",
          lbl_address: "Donate Dogecoin to this Address:",
          lbl_count: "donations",
          lbl_amount: "DOGE"});
        </script>
-      <span class="btc-donate">
-        <a href="bitcoin:1CRgAs83Fe29SH6HtpD6LHRBz2btSbXh75">
-          <img src="icon_bitcoin.svg">Donate BTC
-        </a>
-        <span class="address"><code>1CRgAs83Fe29SH6HtpD6LHRBz2btSbXh75</code></span>
-      </span>
+      <script src="http://coinwidget.com/widget/coin.js"></script>
+        <script>
+        CoinWidgetCom.go({
+        	wallet_address: "18uvmQNBhbTovuZULdhVxkZfjVJeTP3gci"
+        	, currency: "bitcoin"
+        	, counter: "count"
+        	, alignment: "br"
+        	, qrcode: false
+        	, auto_show: false
+        	, lbl_button: "Donate"
+        	, lbl_address: "My Bitcoin Address:"
+        	, lbl_count: "donations"
+        	, lbl_amount: "BTC"
+        });
+        </script>
   <p><a href="http://devaprise.github.io">Go Back</a></p> 
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <!-- Bit Surfer -->
