@@ -4,7 +4,12 @@ body{
 }
 h1{
   text-align:center;
+  font-family: 'SF Pixelate'; 
+  font-weight: bold; 
+  font-style: normal; 
 }
 p{
+  font-family: 'SF Pixelate'; 
+  font-style: normal; 
   text-align:center;
 }
