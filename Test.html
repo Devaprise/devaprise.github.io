@@ -5,12 +5,152 @@
     <title>Testing Processing</title>
     <script src="processing.min.js"></script>
     <script type="application/processing" data-processing-target="pjs">
-    void setup() {
-    size(400,400);
-    frameRate(30);
-    background(0,0,0,0)
+    /** Devaprise's coding environment **/
+    /* @pjs preload="/static/uploaded_resources/p.14158/Shadow.png"; */
+    /* @pjs preload="/static/uploaded_resources/p.14158/Surfer.png"; */
+    
+    
+    
+    String VERSION = "v 00.1";
+    
+    
+    
+    
+    /*
+    
+    comp---completed
+    inpr---in progress
+    todo---to do
+    
+    */
+    
+    
+    //TO-DO:
+    
+    //  comp  align player with wave
+    //  comp  add buttons
+    //  comp  create menu
+    //  comp  fix logo and add broken link screen
+    //  comp  create "How To" page
+    
+    //  inpr  make the game comply to AOCS (this one is hard!)
+    
+    //  todo  add player jump feature
+    //  todo  add sharks
+    //  todo  make sharks deadly
+    //  todo  game over page
+    //  todo  coins
+    //  todo  store (make sure it is available in-game!)
+    
+    /**
+    I.Globals
+        A.Variables
+        B.Class Declarations
+    II.Display
+        A.Pages
+        B.Drawing Functions
+    III.System Functions
+    IV.Classes
+    */
+    
+    
+    
+    
+    
+    
+    //--------------------------------------------I
+    
+    
+    
+    //------------------------------------A
+    
+    int allsize = 195;
+    float why = allsize/13;
+    int manx=200;
+    int many=200;
+    boolean mClicked = false;
+    String page = "logo";
+    
+    
+    
+    //------------------------------------B
+    
+    Player guy;
+    
+    
+    
+    
+    
+    
+    
+    
+    //--------------------------------------------II
+    
+    
+    
+    //------------------------------------A
+    
+    void drawLogo(int x, int y){
+        translate(x,y);
+        fill(0);
+        rect(-70, 20, 50, 5);
+        fill(255);
+        rect(-30, 0, 100, 40,20);
+        fill(0);
+        textSize(20);
+        text("Devaprise", -25, 30);
+        resetMatrix();
     }
-    var drawPlayer = function(x,y){
+    
+    void menu(){
+        background(161,233,255);
+        
+        fill(245, 199, 120);rect(0, 325, width, height-325);fill(222, 189, 124);rect(0, 285, width, 40);fill(189, 154, 83);rect(0, 265, width, 20);fill(255, 255, 255);rect(0, 260, width, 5);fill(160, 218, 250);rect(0, 255, width, 5);fill(4, 50, 179);rect(0, 201, width, 54);fill(30, 90, 230);rect(0, 171, width, 30);fill(160, 218, 250);rect(0, 167, width, 4);fill(183, 229, 240);rect(0, 0, width, 167);
+        
+        button("PLAY!",width/5,height/1.2,100,40,"game");
+        button("HOW TO",width/2,height/1.2,100,40,"howTo");
+        
+        fill(180,120,40);
+        pushStyle();
+            textFont(createFont("Impact",50));
+            text("BitSurfer",width/2-textWidth("BitSurfer")/2 ,height/4);
+            fill(255);
+            textFont(createFont("serif",20));
+            text("A game by Devaprise",width/2-textWidth("A game by Devaprise")/2 ,height/4+20);
+            textSize(12);
+            text(VERSION,0,12);
+        popStyle();
+    }
+    
+    void game(){
+        guy = new Player();
+        background(161, 233, 255);
+        fill(255, 254, 0);
+        ellipse(width/2, 100, 60,60);
+        //drawWord("Test", 200,200,2);
+        Water(height/1.5);
+        guy.drawMan(); 
+        drawShark();
+        
+        button("Home",0,0,100,50,"menu");
+    }
+    
+    
+    
+    //------------------------------------B
+    
+    void Water(int y) {
+        //code for water
+        var leftX = 0;
+        var leftY = y - 20 + cos(frameCount/5)* 30;
+    
+        var rightX = screen.width;
+        var rightY = y - 20 + sin(frameCount/5) * 30;
+        fill(0,0,255,100);
+        quad(leftX, leftY, rightX, rightY, screen.width, screen.width, 0, screen.width);
+    }
+    
+    void drawPlayer(int x, int y){
         noStroke();
         translate(x,y);
         scale(1/7);
@@ -103,11 +243,107 @@
         fill(255, 255, 255);
         rect(134, 314, 15 * 7, 3);
         resetMatrix();
-    };
-    void draw(){
-      background(0,0,255);
-      drawPlayer(mouseX-29,265);
-    };
+    }
+    
+    void drawShark(){
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    //--------------------------------------------III
+    
+    void setup() {
+      //size(screen.width,screen.height);
+      size(400,400);
+      frameRate(20);
+      noStroke();
+    }
+    
+    void draw() {
+        if(page==="logo"){
+            background(200);
+            drawLogo(width/2, height/2 + cos(frameCount/3) * 10);
+            if(frameCount>80){
+                page="menu";
+            }
+        }else if(page==="menu"){
+            background(0,255,255);
+            menu();
+        }else if(page==="game"){
+            fill(255);
+            //drawWord("test", 200,200,2);
+            game(); 
+        }else if(page==="howTo"){
+            background(245, 219, 120);
+            fill(190,140,60);
+            pushStyle();
+                textFont(createFont("serif",20));
+                text("Welcome to BitSurfer!\n\n\nCollect coins and avoid sharks by moving around and jumping!\n\n===> Click to Jump\n\n===> Move the cursor to move the player\n\n\n\nHappy Playing! -Devaprise Team",10,60,width-20,height-80);
+            popStyle();
+            button("Home",0,0,100,50,"menu");
+        }else{
+            background(255,0,0);
+            fill(255);
+            text("Whoops! This link is broken, or doesn't exist.",width/2-textWidth("Whoops! This link is broken, or doesn't exist.")/2,height/2+textAscent()/2);
+            button("Go to menu",width/2-50,height/1.7-20,100,40,"menu");
+        }
+        mClicked=false;
+    }
+    
+    void mouseReleased(){
+        mClicked = true;
+    }
+    
+    void button(String say, int x, int y, int w, int h, String sPage){
+        fill(0,0,0,20);
+        rect(x,y,w,h);
+        fill(180,120,40);
+        if(mouseX>x && mouseX<x+w && mouseY>y && mouseY<y+h){
+            fill(0,0,0,10);
+            rect(x+2,y+2,w-4,h-4);
+            fill(250,210,120);
+            say="| "+say;
+            if(mClicked){
+                page=sPage;
+            }
+        }
+        text(say,x+w/2-textWidth(say)/2,y+h/2+textAscent()/2);
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    //--------------------------------------------IV
+    
+    class Player {
+      int x = mouseX-29;
+      float y = (cos(frameCount/5)*30+mouseX*(sin(frameCount/5)-cos(frameCount/5))/(50))-32;
+      int startX = 20; int startY = 20;
+      int width = 40; int height = 40;
+      boolean falling = true;
+      float yvel = 8;
+      int surfboard = 240;
+      public void drawMan() {
+        drawPlayer(this.x,y+this.surfboard);
+      }
+    }
+    
+    // Add shark class here
+    class Shark {
+        
+        
+        
+    }
   </script>
   </head>
   <body>
