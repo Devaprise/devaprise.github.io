@@ -9,7 +9,7 @@
   <script>
     var canvas = document.getElementById("canvas");
     var processing = new Processing(canvas, function(processing) {
-        processing.size(screen.width, screen.height);
+        processing.size(400, 400);
         processing.background(0xFFF);
 
         var mouseIsPressed = false;
@@ -121,10 +121,10 @@
       
       var drawWater = function(y,speed) {
       var leftX = 0;
-      var leftY = y - 20 + cos(frameCount * speed);
+      var leftY = y - 20 + cos(frameCount/5 * speed)*20;
       
       var rightX = width;
-      var rightY = y - 20 +sin(frameCount * speed);
+      var rightY = y - 20 +sin(frameCount/5 * speed)*20;
       fill(0,0,255,100);
       quad(leftX, leftY, rightX, rightY, width, width, 0, width);
       };
@@ -506,7 +506,7 @@
        ************************/
       
       var Player = function() {
-          this.x = 0; this.y=0+cos(frameCount*3)+mouseX*(sin(frameCount*3)-cos(frameCount*3))/(25);
+          this.x = 0; this.y=0+cos(frameCount/5*3)*20+mouseX*(sin(frameCount/5*3)-cos(frameCount/5*3))/(25);
           this.startX= 20; this.startY= 20;
           this.width= 40; this.height=40;
           this.health= 100;
@@ -548,7 +548,7 @@
               }
       };
       Player.prototype.draw= function() {
-              drawPlayer(this.x,this.y+cos(frameCount*3)+mouseX*(sin(frameCount*3)-cos(frameCount*3))/(25),this.width,this.height);
+              drawPlayer(this.x,this.y+cos(frameCount/5*3)*20+mouseX*(sin(frameCount*3)-cos(frameCount*3))/(25),this.width,this.height);
               Player.jump();
               this.x = mouseX-40;
               this.y += this.yvel;
