@@ -10,7 +10,6 @@
     var canvas = document.getElementById("canvas");
     var processing = new Processing(canvas, function(processing) {
         processing.size(screen.width, screen.height);
-        processing.background(0xFFF);
     
         var mouseIsPressed = false;
         processing.mousePressed = function () { mouseIsPressed = true; };
