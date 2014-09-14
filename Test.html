@@ -1,168 +1,83 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JavaScript</title>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.8/processing.min.js"></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Devaprise</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <canvas id="canvas"></canvas>
-  <script>
-    var canvas = document.getElementById("canvas");
-    var processing = new Processing(canvas, function(processing) {
-        processing.size(screen.width, screen.height);
-    
-        var mouseIsPressed = false;
-        processing.mousePressed = function () { mouseIsPressed = true; };
-        processing.mouseReleased = function () { mouseIsPressed = false; };
+      <!-- Docs master nav -->
+    <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="#" class="navbar-brand">Planner <small>By Devaprise</small></a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Sign Up</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-        var keyIsPressed = false;
-        processing.keyPressed = function () { keyIsPressed = true; };
-        processing.keyReleased = function () { keyIsPressed = false; };
 
-        with (processing) {
-            // INSERT YOUR KHAN ACADEMY PROGRAM HERE
-            /*
-          Wonder Paint
-          
-          Created by Thomas L.
-          on 1/11/2014
-          
-          Last updated on 8/8/2014
-      */
-      
-      // Set this to false to see your abstract creations slowly fade away
-      var paint_mode = false;
-      
-      var spores = [];
-      var record = [];
-      
-      colorMode(HSB);
-      
-      var drawSpores = true;
-      var bgs = true;
-      
-      mousePressed = function() {
-          drawSpores = true;
-          bgs = !bgs;
-      };
-      
-      mouseReleased = function() {
-          drawSpores = false;
-      };
-      
-      record.draw = function() {
-          if(record.length) {
-              var rl = record.length-1;
-              var mx = record[rl][0];
-              var my = record[rl][1];
-              var pmx = record[rl][2];
-              var pmy = record[rl][3];
-              for (var i = 0; i < round(random(10)); i++) {
-                  var r = random(-5,5);
-                  var r1 = random(-5,5);
-                  var mxr = mx-i*r;
-                  var myr = my-i*r1;
-                  var sec = random(3,abs(((mx-pmx)%20)+((my-pmx)%20)));
-                  
-                  spores.add(mxr,myr,1,sec);
-                  spores.add(400-mxr,myr,1,sec);
-      
-      
-                  stroke((frameCount)%255, 220, 255);
-                  line(mx,my,pmx,pmy);
-                  line(400-mx,my,400-pmx,pmy);
-              }
-          }
-          spores.draw();
-          record.pop();
-          record.pop();
-          record.pop();
-      };
-      
-      spores.draw = function() {
-          for (var i = 0; i < spores.length; i ++) {
-              var s = spores[i];
-              if(s.s>s.ms) {
-                  spores.splice(i,1);
-              } else {
-                  s.s++;
-              }
-              fill(frameCount%255, 220, 255);
-              noStroke();
-              ellipse(s.x,s.y,s.s,s.s);
-          }
-          
-      };
-      
-      spores.add = function(x,y,s,ms) {
-          spores.push({
-              x:x,y:y,s:s,ms:ms
-          });
-      };
-      
-      noStroke();
-      background(0, 0, 0);
-      
-      draw = function() {
-          noStroke();
-          if(bgs) {
-              if(drawSpores) {
-                  fill(255, 0, 255,40);
-              } else {
-                  fill(255, 0, 0,40);
-              }
-          } else {
-              if(drawSpores) {
-                  fill(255, 0, 0,40);
-              } else {
-                  fill(255, 0, 255,40);
-              }
-          }
-      
-          if(!paint_mode) {
-              rect(0,0,width,height);
-          }
-          
-          if(mouseIsPressed) {
-              for (var i = 0; i < round(random(10)); i++) {
-                  
-              var r = random(-5,5);
-              var r1 = random(-5,5);
-              var mxr = mouseX-i*r;
-              var myr = mouseY-i*r1;
-              var sec = random(3,abs(((mouseX-pmouseX)%20)+((mouseY-pmouseX)%20)));
-              
-              record.push([mouseX,mouseY,pmouseX,pmouseY]);
-              spores.add(mxr,myr,1,sec);
-              
-              spores.add(400-mxr,myr,1,sec);
-              
-              }
-              
-              stroke((frameCount)%255, 220, 255);
-              line(mouseX,mouseY,pmouseX,pmouseY);
-              line(400-mouseX,mouseY,400-pmouseX,pmouseY);
-          }
-          
-          if(!paint_mode) {
-              fill(0, 0, 0);
-              ellipse(pmouseX,pmouseY,2,2);
-              ellipse(400-pmouseX,pmouseY,2,2);
-              
-              fill(0, 0, 255);
-              ellipse(mouseX,mouseY,2,2);
-              ellipse(400-mouseX,mouseY,2,2);
-          }
-          
-                if(drawSpores) {
-                    spores.draw();
-                } else {
-                    record.draw();
-                }
-            };
-          }
-          if (typeof draw !== 'undefined') processing.draw = draw;
-      });
-    </script>
+    <!-- Page content of course! -->
+  <main class="bs-docs-masthead" id="content" role="main">
+  <div class="container">
+    <span class="bs-docs-booticon bs-docs-booticon-lg bs-docs-booticon-outline">B</span>
+    <p class="lead">Planner by Devaprise. The world's simplest school planner.</p>
+    <p class="version">Coming Soon.</p>
+
+  </div>
+  </main>
+  <form class="form-horizontal" role="form">
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"> Remember me
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Sign in</button>
+    </div>
+  </div>
+</form>
+
 </body>
 </html>
