@@ -1,30 +1,70 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset='utf-8' />
-    <script src='https://cdn.firebase.com/js/client/1.0.21/firebase.js'></script>
-    <script src='https://cdn.firebase.com/js/simple-login/1.6.3/firebase-simple-login.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js'></script>
-    <script src="https://cdn.firebase.com/js/simple-login/1.6.3/firebase-simple-login.js"></script>
+<head>
+  <script src="https://cdn.firebase.com/js/client/1.0.15/firebase.js"></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
+  <link rel="stylesheet" type="text/css" href="css/chat.css">
+</head>
+<body>
 
-    <!-- Download from https://github.com/firebase/firechat -->
-    <link rel='stylesheet' href="firechat-v1.0.0/firechat-default.css" />
-    <script src='firechat-v1.0.0/firechat-default.js'></script>
-  </head>
-  <body>
-    <script type='text/javascript'>
-      // Create a new Firebase reference, and a new instance of the Login client
-      var chatRef = new Firebase('https://luminous-torch-6675.firebaseio.com/chat');
-      var auth = new FirebaseSimpleLogin(chatRef, function(err, user) {
-        // Once authenticated, instantiate Firechat with our user id and user name
-        if (user) {
-          var chat = new FirechatUI(chatRef, document.getElementById('firechat-wrapper'));
-          chat.setUser(user.uid, user.displayName);
-        }
-      });
-    </script>
-    <div id='firechat-wrapper'>
-      <a href='#' onclick='auth.login("google");'>Login</a>
-    </div>
-  </body>
+<!-- CHAT MARKUP -->
+<div class="example-chat l-demo-container">
+  <header>Devaprise Chat</header>
+
+  <div class='example-chat-toolbar'>
+    <label for="nameInput">Username:</label>
+    <input type='text' id='nameInput' placeholder='enter a username...'>
+  </div>
+
+  <ul id='example-messages' class="example-chat-messages"></ul>
+
+  <footer>
+    <input type='text' id='messageInput'  placeholder='Type a message...'>
+  </footer>
+</div>
+
+<!-- CHAT JAVACRIPT -->
+<script>
+  // CREATE A REFERENCE TO FIREBASE
+  var messagesRef = new Firebase('https://luminous-torch-6675.firebaseio.com/');
+
+  // REGISTER DOM ELEMENTS
+  var messageField = $('#messageInput');
+  var nameField = $('#nameInput');
+  var messageList = $('#example-messages');
+
+  // LISTEN FOR KEYPRESS EVENT
+  messageField.keypress(function (e) {
+    if (e.keyCode == 13) {
+      //FIELD VALUES
+      var username = nameField.val();
+      var message = messageField.val();
+
+      //SAVE DATA TO FIREBASE AND EMPTY FIELD
+      messagesRef.push({name:username, text:message});
+      messageField.val('');
+    }
+  });
+
+  // Add a callback that is triggered for each chat message.
+  messagesRef.limit(10).on('child_added', function (snapshot) {
+    //GET DATA
+    var data = snapshot.val();
+    var username = data.name || "anonymous";
+    var message = data.text;
+
+    //CREATE ELEMENTS MESSAGE & SANITIZE TEXT
+    var messageElement = $("<li>");
+    var nameElement = $("<strong class='example-chat-username'></strong>")
+    nameElement.text(username);
+    messageElement.text(message).prepend(nameElement);
+
+    //ADD MESSAGE
+    messageList.append(messageElement)
+
+    //SCROLL TO BOTTOM OF MESSAGE LIST
+    messageList[0].scrollTop = messageList[0].scrollHeight;
+  });
+</script>
+</body>
 </html>
