@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <script src='https://cdn.firebase.com/js/client/1.0.21/firebase.js'></script>
+    <script src='https://cdn.firebase.com/js/simple-login/1.6.3/firebase-simple-login.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js'></script>
+    <script src="https://cdn.firebase.com/js/simple-login/1.6.3/firebase-simple-login.js"></script>
+
+    <!-- Download from https://github.com/firebase/firechat -->
+    <link rel='stylesheet' href="firechat-v1.0.0/firechat-default.css" />
+    <script src='firechat-v1.0.0/firechat-default.js'></script>
+  </head>
+  <body>
+    <script type='text/javascript'>
+      // Create a new Firebase reference, and a new instance of the Login client
+      var chatRef = new Firebase('https://luminous-torch-6675.firebaseio.com/chat');
+      var auth = new FirebaseSimpleLogin(chatRef, function(err, user) {
+        // Once authenticated, instantiate Firechat with our user id and user name
+        if (user) {
+          var chat = new FirechatUI(chatRef, document.getElementById('firechat-wrapper'));
+          chat.setUser(user.uid, user.displayName);
+        }
+      });
+    </script>
+    <div id='firechat-wrapper'>
+      <a href='#' onclick='auth.login("google");'>Login</a>
+    </div>
+  </body>
+</html>
