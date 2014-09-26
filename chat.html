@@ -33,7 +33,11 @@
   var messageField = $('#messageInput');
   var nameField = $('#nameInput');
   var messageList = $('#example-messages');
-
+  var time = function (timestamp) { // Convert UNIX epoch time into human readble time.
+    var epoch = new Date(timestamp);
+    var date = epoch.toUTCString();
+    return date;
+  }
   // LISTEN FOR KEYPRESS EVENT
   messageField.keypress(function (e) {
     if (e.keyCode == 13) {
@@ -42,7 +46,7 @@
       var message = messageField.val();
 
       //SAVE DATA TO FIREBASE AND EMPTY FIELD
-      messagesRef.push({name:username, text:message});
+      messagesRef.push({name:username, text:message,  time:Firebase.ServerValue.TIMESTAMP});
       messageField.val('');
     }
   });
@@ -53,7 +57,6 @@
     var data = snapshot.val();
     var username = data.name || "anonymous";
     var message = data.text;
-
     //CREATE ELEMENTS MESSAGE & SANITIZE TEXT
     var messageElement = $("<li>");
     var nameElement = $("<strong class='example-chat-username'></strong>")
