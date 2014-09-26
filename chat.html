@@ -1,74 +1,94 @@
 <!doctype html>
 <html>
 <head>
-  <title>Devaprise Chat</title>
-  <script src="https://cdn.firebase.com/js/client/1.0.15/firebase.js"></script>
-  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
-  <link rel="stylesheet" type="text/css" href="css/chat.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Devaprise Chat</title>
+    <script src="https://cdn.firebase.com/js/client/1.0.15/firebase.js"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/chat.css">
+    <link href='http://fonts.googleapis.com/css?family=Muli|Roboto' rel='stylesheet' type='text/css'>
 </head>
 <body>
+    <div class="chat-app">
+        <h1><marquee>Welcome to the Devaprise Chat!</marquee></h1>
+        <div id="comments-box"></div>
+        <form id="post-area">
+            <textarea id="text-area" placeholder="Type your comment here!"></textarea>
+            <input id="post-comment" type="button" value="Post Comment" />
+            <div id="name-changer">Name:
+                <span class="my-name"></span>
+                <input id="changename" type="button" value="Change Name" />
+            </div>
+        </form>
+    </div>
+<script type="text/javascript">
+    var stat = 1;
+    var username = "Guest";
+    var chatDataRef = new Firebase('https://luminous-torch-6675.firebaseio.com/');
+    $('#text-area').focus();
+    $(".my-name").html(username);
 
-<!-- CHAT MARKUP -->
-<div class="example-chat l-demo-container">
-  <header><marquee id="banner-message">Welcome to the Devaprise Chat!</marquee></header>
 
-  <div class='example-chat-toolbar'>
-    <label for="nameInput">Username:</label>
-    <input type='text' id='nameInput' placeholder='enter a username...'>
-  </div>
 
-  <ul id='example-messages' class="example-chat-messages"></ul>
+    $('#changename').click(function(){
+        var entered = prompt("Enter your name:", username);
+        if (entered.length >= 20) {
+            alert("Name must be less than 20 characters.")
+        } else {
+            username = entered;
+        }
+        $(".my-name").html(username);
+    });
 
-  <footer>
-    <input type='text' id='messageInput'  placeholder='Type a message...'>
-  </footer>
-</div>
+    chatDataRef.limit(100).on('child_added', function(snapshot) {
+        stat = 2;
+        var comment = snapshot.val();
+        if (!comment.name) {
+            return;
+        }
 
-<!-- CHAT JAVACRIPT -->
-<script>
-  // CREATE A REFERENCE TO FIREBASE
-  var messagesRef = new Firebase('https://luminous-torch-6675.firebaseio.com/');
+        $('#comments-box').append($('<div class="comment"/>').html($('<div class="name"/>').text(comment.name)).append($('<div class="date"/>').text(comment.date)).append($('<div class="text"/>').text(comment.text)));
+        $('#comments-box')[0].scrollTop = $('#comments-box')[0].scrollHeight;
+    });
 
-  // REGISTER DOM ELEMENTS
-  var messageField = $('#messageInput');
-  var nameField = $('#nameInput');
-  var messageList = $('#example-messages');
-  var time = function (timestamp) { // Convert UNIX epoch time into human readble time.
-    var epoch = new Date(timestamp);
-    var date = epoch.toUTCString();
-    return date;
-  }
-  // LISTEN FOR KEYPRESS EVENT
-  messageField.keypress(function (e) {
-    if (e.keyCode == 13) {
-      //FIELD VALUES
-      var username = nameField.val();
-      var message = messageField.val();
-
-      //SAVE DATA TO FIREBASE AND EMPTY FIELD
-      messagesRef.push({name:username, text:message,  time:Firebase.ServerValue.TIMESTAMP});
-      messageField.val('');
+    var getTime = function() {
+        var date = new Date;
+        var hour = date.getUTCHours();
+        var min = date.getUTCMinutes();
+        var sec = date.getUTCSeconds();
+        var time = hour+":"+(min<10? "0"+min : min)+":"+(sec<10? "0"+sec : sec)+" UTC";
+        return time;
     }
-  });
+    var postComment = function() {
+        var time = getTime();
+        var text = $('#post-area > #text-area').val();
 
-  // Add a callback that is triggered for each chat message.
-  messagesRef.limit(10).on('child_added', function (snapshot) {
-    //GET DATA
-    var data = snapshot.val();
-    var username = data.name || "anonymous";
-    var message = data.text;
-    //CREATE ELEMENTS MESSAGE & SANITIZE TEXT
-    var messageElement = $("<li>");
-    var nameElement = $("<strong class='example-chat-username'></strong>")
-    nameElement.text(username);
-    messageElement.text(message).prepend(nameElement);
+        if (text.indexOf('<script>')!== -1) {
+            alert("<script> tag not allowed.");
+            return;
+        }
+        if (text === "") {
+            alert("Please type something into the comment box.");
+            return;
+        }
+        chatDataRef.push({name: username, date: time, text: text});
+        $('#text-area').val("");
+        $('#text-area').focus();
+    };
 
-    //ADD MESSAGE
-    messageList.append(messageElement)
+    $('#post-comment').click(function() {
+        postComment();
+    });
+    var updateTime = function() {
+        if (stat === 2) {
+            var time = getTime();
+            $('#status').html(time);
+        }
+    }
+    window.setInterval(updateTime, 100);
 
-    //SCROLL TO BOTTOM OF MESSAGE LIST
-    messageList[0].scrollTop = messageList[0].scrollHeight;
-  });
-</script>
-</body>
+    $('#text-area').keydown(function(k) { if (k.which == 18) { postComment();} });
+        </script>
+    </body>
 </html>
