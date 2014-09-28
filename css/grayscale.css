@@ -272,11 +272,6 @@ a:focus {
     .download-section {
         padding: 100px 0;
     }
-
-    #map {
-        height: 400px;
-        margin-top: 250px;
-    }
 }
 
 .btn {
@@ -361,8 +356,4 @@ body {
 }
 .email {
     color: #000;
-}
-
-.navbar-fixed-top {
-    
 }
