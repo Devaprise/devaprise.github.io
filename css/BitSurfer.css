@@ -67,7 +67,6 @@ h2 {
   width: 100px;
   line-height: 140%;
   font-size: 17px;
-  font-family: open sans;
   font-weight: bold;
 }
 .reload:hover{
@@ -206,9 +205,6 @@ font-weight: 100;
 background: rgba(0, 0, 0, 0.25);
 color: #FFF;
 }
-.main section.page3 {
-background:url(tilted-phone.png) no-repeat 156px -150px ;
-}
 .main section.page3 .page_container {
 overflow: hidden;
 max-width: 500px;
@@ -345,8 +341,6 @@ box-sizing: border-box;
 -moz-box-sizing: border-box;
 -webkit-box-sizing: border-box;
 }
-
-
 p {
     text-align: center;
 }
