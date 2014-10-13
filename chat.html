@@ -70,6 +70,10 @@
                     alert("<style> tag is not allowed");
                     return;
             }
+            if((text.indexOf('<textarea>')!== -1 || text.indexOf('textarea>') !== -1) && pr === false){
+                    alert("<textarea> tag is not allowed");
+                    return;
+            }
             if (text === "") {
                 alert("Please type something into the comment box.");
                 return;
