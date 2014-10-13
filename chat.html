@@ -22,69 +22,67 @@
             </div>
         </form>
     </div>
-<script type="text/javascript">
-    var stat = 1;
-    var username = "Guest";
-    var chatDataRef = new Firebase('https://luminous-torch-6675.firebaseio.com/');
-    $('#text-area').focus();
-    $(".my-name").html(username);
-
-
-
-    $('#changename').click(function(){
-        var entered = prompt("Enter your name:", username);
-        if (entered.length >= 20) {
-            alert("Name must be less than 20 characters.")
-        } else {
-            username = entered;
-        }
+    <script>
+        var stat = 1;
+        var username = "Guest";
+        var chatDataRef = new Firebase('https://luminous-torch-6675.firebaseio.com/');
         $(".my-name").html(username);
-    });
 
-    chatDataRef.limit(100).on('child_added', function(snapshot) {
-        stat = 2;
-        var comment = snapshot.val();
-        if (!comment.name) {
-            return;
+        var m = $('#changename');
+
+        m.click(function(){
+            var entered = prompt("Enter your name:", username);
+            if (entered.length >= 20) {
+                alert("Name must be less than 20 characters.")
+            } else {
+                username = entered;
+            }
+            $(".my-name").html(username);
+        });
+
+        chatDataRef.limit(100).on('child_added', function(snapshot) {
+            stat = 2;
+            var comment = snapshot.val();
+            if (!comment.name) {
+                return;
+            }
+
+            $('#comments-box').append($('<div class="comment"/>').html($('<div class="name"/>').html(comment.name)).append($('<div class="date"/>').html(comment.date)).append($('<div class="text"/>').html(comment.text)));
+            $('#comments-box')[0].scrollTop = $('#comments-box')[0].scrollHeight;
+        });
+        var getTime = function() {
+            var date = new Date;
+            var hour = date.getUTCHours();
+            var min = date.getUTCMinutes();
+            var sec = date.getUTCSeconds();
+            var time = hour+":"+(min<10? "0"+min : min)+":"+(sec<10? "0"+sec : sec)+" UTC";
+            return time;
         }
-
-        $('#comments-box').append($('<div class="comment"/>').html($('<div class="name"/>').text(comment.name)).append($('<div class="date"/>').text(comment.date)).append($('<div class="text"/>').text(comment.text)));
-        $('#comments-box')[0].scrollTop = $('#comments-box')[0].scrollHeight;
-    });
-
-    var getTime = function() {
-        var date = new Date;
-        var hour = date.getUTCHours();
-        var min = date.getUTCMinutes();
-        var sec = date.getUTCSeconds();
-        var time = hour+":"+(min<10? "0"+min : min)+":"+(sec<10? "0"+sec : sec)+" UTC";
-        return time;
-    }
-    var postComment = function() {
-        var time = getTime();
-        var text = $('#post-area > #text-area').val();
-
-        if (text === "") {
-            alert("Please type something into the comment box.");
-            return;
-        }
-        chatDataRef.push({name: username, date: time, text: text});
-        $('#text-area').val("");
-        $('#text-area').focus();
-    };
-
-    $('#post-comment').click(function() {
-        postComment();
-    });
-    var updateTime = function() {
-        if (stat === 2) {
+        var postComment = function() {
             var time = getTime();
-            $('#status').html(time);
-        }
-    }
-    window.setInterval(updateTime, 100);
+            var text = $('#post-area > #text-area').val();
 
-    $('#text-area').keydown(function(k) { if (k.which == 18) { postComment();} });
-        </script>
+            if (text === "") {
+                alert("Please type something into the comment box.");
+                return;
+            }
+            chatDataRef.push({name: username, date: time, text: text});
+            $('#text-area').val("");
+            $('#text-area').focus();
+        };
+
+        $('#post-comment').click(function() {
+            postComment();
+        });
+        var updateTime = function() {
+            if (stat === 2) {
+                var time = getTime();
+                $('#status').html(time);
+            }
+        }
+        window.setInterval(updateTime, 100);
+
+        $('#text-area').keydown(function(k) { if (k.which == 18 || k.which == 36) { postComment();} });
+    </script>
     </body>
 </html>
