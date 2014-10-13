@@ -61,7 +61,12 @@
         var postComment = function() {
             var time = getTime();
             var text = $('#post-area > #text-area').val();
-
+            
+            if ((text.indexOf('<script')!== -1 || text.indexOf('script>') !== -1) && pr === false) {
+                    alert("<script> tag not allowed.");
+                    return;
+            }
+            
             if (text === "") {
                 alert("Please type something into the comment box.");
                 return;
