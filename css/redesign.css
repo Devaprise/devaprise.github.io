@@ -1,8 +1,9 @@
 body{
     background: url(../images/background.png) no-repeat center center fixed;
-    background-size: cover;
-    -webkit-background-size:cover;
-      -moz-background-size: cover;
+    -webkit-background-size: cover; /* For WebKit*/
+    -moz-background-size: cover;    /* Mozilla*/
+    -o-background-size: cover;      /* Opera*/
+    background-size: cover;         /* Generic*/
     font-family: 'Lato', sans-serif;
 }
 h1,
