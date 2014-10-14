@@ -1,5 +1,6 @@
 body{
-    width: 100%;
+    background: url(../images/Background.png) no-repeat center center fixed;
+    background-size: cover;
     font-family: 'Lato', sans-serif;
 }
 h1,
@@ -13,50 +14,67 @@ h5,
 h6{
     font-family: 'Roboto', sans-serif;
 }
-.navbar-custom {
-    margin-bottom: 0;
-    border-bottom: 1px solid rgba(255,255,255,.3);
-    text-transform: uppercase;
-    background-color: #000;
+p{
+    font-size: 20px;
+    font-size-adjust: auto;
+}
+.heading {
+    color:#fff;
+    text-align: center;
+    font-size: 60px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.bottom-heading {
+    text-align: center;
 }
 
-.navbar-custom .navbar-brand {
-    font-weight: 700;
+hr {
+    display: block;
+    border-radius: 15px;
+    border-width: thick;
+    width: 50%;
 }
 
-.navbar-custom .navbar-brand:focus {
-    outline: 0;
+.description {
+    text-align: center;
+}
+/* MailChimp Form Embed Code - Slim - 08/17/2011 */
+#mc_embed_signup form {display:block; position:relative; text-align:center; padding:10px 0 10px 3%}
+#mc_embed_signup h2 {font-weight:bold; padding:0; margin:15px 0; font-size:1.4em;}
+#mc_embed_signup input {border:1px solid #999; -webkit-appearance:none;}
+#mc_embed_signup input:focus {border-color:#333;}
+#mc_embed_signup .button {background-color: #aaa; border: 0 none; border-radius:25px; color: #FFFFFF; cursor: pointer; display: inline-block; font-size:15px; font-weight: bold; height: 32px; line-height: 32px; margin: 0 5px 10px 0; padding:0; text-align: center; text-decoration: none; vertical-align: top; white-space: nowrap; width: auto;}
+#mc_embed_signup .button:hover {background-color:#777;}
+#mc_embed_signup .small-meta {font-size: 11px;}
+#mc_embed_signup .nowrap {white-space:nowrap;}     
+#mc_embed_signup .clear {clear:none; display:inline;}
+
+#mc_embed_signup label {display:block; font-size:16px; padding-bottom:10px; font-weight:bold;}
+#mc_embed_signup input.email {display:block; padding:8px 0; margin:auto auto 10px auto; text-indent:5px; width:58%; min-width:130px;}
+#mc_embed_signup input.button {display:block; width:50%; margin: auto auto 10px auto; min-width:90px;}
+
+#mc_embed_signup div#mce-responses {float:none; top:-1.4em; padding:0em .5em 0em .5em; overflow:hidden; width:90%;margin: 0 5%; clear: both;}
+#mc_embed_signup div.response {margin:1em 0; padding:1em .5em .5em 0; font-weight:bold; float:left; top:-1.5em; z-index:1; width:80%;}
+#mc_embed_signup #mce-error-response {display:none;}
+#mc_embed_signup #mce-success-response {color:#529214; display:none;}
+#mc_embed_signup label.error {display:block; float:none; width:auto; margin-left:1.05em; text-align:left; padding:.5em 0;}
+
+.social {
+    text-align: center;
 }
 
-.navbar-custom .navbar-brand .navbar-toggle {
-    padding: 4px 6px;
-    font-size: 16px;
-    color: #fff;
+
+
+
+.social-buttons a > img{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.navbar-custom .navbar-brand .navbar-toggle:focus,
-.navbar-custom .navbar-brand .navbar-toggle:active {
-    outline: 0;
-}
-
-.navbar-custom a {
-    color: #fff;
-}
-
-.navbar-custom .nav li.active {
-    outline: nonte;
-    background-color: rgba(255,255,255,.3);
-}
-
-.navbar-custom .nav li a {
-    -webkit-transition: background .3s ease-in-out;
-    -moz-transition: background .3s ease-in-out;
-    transition: background .3s ease-in-out;
-}
-
-.navbar-custom .nav li a:hover,
-.navbar-custom .nav li a:focus,
-.navbar-custom .nav li a.active {
-    outline: 0;
-    background-color: rgba(255,255,255,.3);
+.social-buttons {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
