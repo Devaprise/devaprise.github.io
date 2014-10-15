@@ -1,0 +1,90 @@
+<!doctype HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <link href="css/projects.css" rel="stylesheet">
+    <link href="css/onepage-scroll.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#page1">Portfolio</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#page2">About</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#page3">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    
+    <div class="main">
+      <section class="page1">
+        <div class="page_container">
+          <h1 class="Heading">Devaprise Projects</h1>
+          <h2>Not your average shark game...</h2>
+          <p class="credit">Created by <a href="http://www.devaprise.com">Devaprise</a> A start up founded on <a href="http://www.khanacademy.com">Khan Academy</a>
+            </p>
+        </div>
+      </section>
+        <!-- Here ends first section-->
+        <section class="page2">
+	      <div class="page_container">
+          <h1>About Bit Surfer</h1>
+          <h2>Bit Surfer was the brainchild of our founder, Chris Tapia. He gathered the rest of us to help him build this game.(Also the company, but mostly the game). It took us about two months to finish building it. We are currently working on making a mobile app version of the game.</h2>
+	      </div>
+      </section>
+        <!-- Here ends second section-->
+	    <section class="page3">
+	      <div class="page_container">
+          <h1>Wanna Help?</h1>
+          <h2>You can help our dreams by helping us build the mobile apps. You can also help by donating us some money. Your contributions help make us better and Bit Surfer a greater game.</h2>
+  	    </div>
+      </section>
+        <!-- Here ends third section-->
+    </div>
+    <!-- Javascript? Me gusta-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.js"></script>
+    <script type="text/javascript" src="js/jquery.onepage-scroll.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script>
+	  $(document).ready(function(){
+      $(".main").onepage_scroll({
+        sectionContainer: "section",
+        loop: false,
+        responsiveFallback: false
+      });
+		});
+	</script>
+</body>
+</html>
