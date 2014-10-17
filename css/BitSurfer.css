@@ -86,7 +86,7 @@ h2 {
 }
 .btns {
   width: 100%;
-  margin: 100px auto;
+  margin: auto;
 }
 .credit {
   text-align: center;
@@ -293,7 +293,6 @@ display: inline-block;
 }
 body .socials {
 margin:auto;
-float: center;
 clear: both;
 }
 @media (max-width: 500px) {
