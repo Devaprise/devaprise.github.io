@@ -1,5 +1,22 @@
+body{
+    background: #2980b9;
+}
+input[type=button]{
+    background-color: #aaa;
+    border: 3px solid #777;
+    border-radius: 25px;
+    color: #FFF;
+    cursor: pointer;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+}
+input[type=button]:hover{
+    background-color: #777;
+    border-color: #aaa;
+}
 .chat-app {
-    font-family: 'Muli', Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: 'Lato', Helvetica, Arial, "Lucida Grande", sans-serif;
     display: block;
     position: relative;
     width: auto;
@@ -7,7 +24,7 @@
 }
 .chat-app h1 {
     font-family: 'Roboto', sans-serif;
-    color: #000050;
+    color: #aaa;
     text-align: center;
     font-size: 25px;
     font-weight: bold;
@@ -19,21 +36,21 @@
     overflow: auto;
 
     background-color: #dfe3ea;
-    border: 1px solid #CCC;
-    border-radius: 3px;
+    border: 0;
+    border-radius: 6px;
     -webkit-box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
     line-height: 22px;
     color: #666;
 }
 .chat-app .comment {
+    width: auto;
     background-color: white;
-    border: 1px solid black;
-    border-radius: 5px;
+    border: 2px solid black;
+    border-radius: 6px;
     position: relative;
     margin: 5px;
     box-shadow: 2px 2px 2px #888;
-    height: 80px;
 }
 .chat-app .name {
     background-color: #000;
@@ -58,12 +75,12 @@
     margin-bottom: 5px;
     margin-right: 10px;
     text-align: justify;
+    word-wrap: break-word;
 }
 .chat-app #text-area {
-    width: 97%;
+    width: 95%;
     margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 3%;
 
     border: 1px solid #9090B0;
     border-radius: 3px;
@@ -73,10 +90,13 @@
 .chat-app #post-area {
     display: inline-block;
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .chat-app #post-comment {
     height: 40px;
-    border-radius: 5px;
+    width: 150px;
+    border-radius: 50px;
     margin-left: 10px;
     display: inline-block;
 }
@@ -114,6 +134,12 @@ code {
     clear: both;
 }
 #changename {
+    width: 150px;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 20px;
+}
+@media(max-width: 380px){
+    .chat-app #post-comment {
+        width: 90px;
+    }
 }
