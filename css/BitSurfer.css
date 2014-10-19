@@ -209,10 +209,10 @@ color: #FFF;
 overflow: hidden;
 max-width: 500px;
 width: 100%;
-right: -285px;
+text-align: right;
 }
 .main section.page3 h1 {
-text-align: left;
+text-align: right;
 padding: 0;
 margin-bottom: 0;
 font-size: 70px;
