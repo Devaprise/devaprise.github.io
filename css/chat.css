@@ -31,8 +31,10 @@ input[type=button]:hover{
 }
 .chat-app #comments-box {
     position: relative;
-    margin: 5px;
-    height: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 600px;
     overflow: auto;
 
     background-color: #dfe3ea;
@@ -44,7 +46,7 @@ input[type=button]:hover{
     color: #666;
 }
 .chat-app .comment {
-    width: auto;
+    width: 95%;
     background-color: white;
     border: 2px solid black;
     border-radius: 6px;
