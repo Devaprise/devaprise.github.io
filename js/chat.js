@@ -8,7 +8,17 @@ var m = $('#changename');
 m.click(function(){
     var entered = prompt("Enter your name:", username);
     if (entered.length >= 50) {
-        alert("Name must be less than 50 characters.")
+        alert("Name must be less than 50 characters.");
+    } 
+    if ((text.indexOf('<script')!== -1 || text.indexOf('script>') !== -1) && pr === false) {
+            alert("<script> tag not allowed.");
+            return;
+    } else if((text.indexOf('<style>') !== -1 || text.indexOf('style>') !== -1) && pr === false) {
+            alert("<style> tag is not allowed");
+            return;
+    } else if((text.indexOf('<textarea>')!== -1 || text.indexOf('textarea>') !== -1) && pr === false){
+            alert("<textarea> tag is not allowed");
+            return;
     } else {
         username = entered;
     }
