@@ -1,7 +1,5 @@
 /*!
- * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ * Devaprise Corp.
  */
 
 body {
@@ -93,7 +91,7 @@ a:focus {
 }
 
 .navbar-custom .nav li.active {
-    outline: nonte;
+    outline: none;
     background-color: rgba(255,255,255,.3);
 }
 
@@ -130,7 +128,6 @@ a:focus {
         border-bottom: 1px solid rgba(255,255,255,.3);
     }
 }
-
 .intro {
     display: table;
     width: 100%;
@@ -150,40 +147,36 @@ a:focus {
     display: table-cell;
     vertical-align: middle;
 }
+.intro {
+    height: 100%;
+    padding: 0;
+}
 
 .intro .intro-body .brand-heading {
-    font-size: 40px;
+    font-size: 100px;
 }
 
 .intro .intro-body .intro-text {
-    font-size: 18px;
+    font-size: 25px;
 }
-
-@media(min-width:767px) {
-    .intro {
-        height: 100%;
-        padding: 0;
-    }
-
+@media(max-width:767px) {
     .intro .intro-body .brand-heading {
-        font-size: 100px;
+        font-size: 60px;
     }
 
     .intro .intro-body .intro-text {
-        font-size: 25px;
+        font-size: 40px;
     }
 }
-
 .btn-circle {
-    width: 70px;
-    height: 70px;
-    margin-top: 15px;
+    width: 80px;
+    height: 80px;
+    margin-top: 25px;
     padding: 7px 16px;
-    border: 2px solid #fff;
-    border-radius: 35px;
-    font-size: 40px;
+    border: 3px solid #fff;
+    border-radius: 100%;
+    font-size: 50px;
     color: #fff;
-    background: 0 0;
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
     transition: background .3s ease-in-out;
@@ -193,7 +186,7 @@ a:focus {
 .btn-circle:focus {
     outline: 0;
     color: #fff;
-    background: rgba(255,255,255,.1);
+    background: rgba(255,255,255,.4);
 }
 
 .btn-circle i.animated {
@@ -255,8 +248,8 @@ a:focus {
 .download-section {
     width: 100%;
     padding: 50px 0;
-    color: #fff;
-    background: url(../images/bit.PNG) no-repeat center center scroll;
+    color: #000;
+    background: url(../images/bit.PNG);
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -284,14 +277,15 @@ a:focus {
 }
 
 .btn-default {
-    border: 1px solid #219ab3;
+    border: 3px solid #219ab3;
+    border-radius: 25px;
     color: #219ab3;
     background-color: transparent;
 }
 
 .btn-default:hover,
 .btn-default:focus {
-    border: 1px solid #219ab3;
+    border: 3px solid #219ab3;
     outline: 0;
     color: #000;
     background-color: #219ab3;
@@ -356,4 +350,10 @@ body {
 }
 .email {
     color: #000;
+}
+
+
+#mc-embedded-subscribe {
+    display: block;
+    margin: 0 auto;
 }
