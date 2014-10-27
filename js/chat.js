@@ -13,10 +13,12 @@ m.click(function(){
     if ((text.indexOf('<script')!== -1 || text.indexOf('script>') !== -1) && pr === false) {
             alert("<script> tag not allowed.");
             return;
-    } else if((text.indexOf('<style>') !== -1 || text.indexOf('style>') !== -1) && pr === false) {
+    } 
+    if((text.indexOf('<style>') !== -1 || text.indexOf('style>') !== -1) && pr === false) {
             alert("<style> tag is not allowed");
             return;
-    } else if((text.indexOf('<textarea>')!== -1 || text.indexOf('textarea>') !== -1) && pr === false){
+    } 
+    if((text.indexOf('<textarea>')!== -1 || text.indexOf('textarea>') !== -1) && pr === false){
             alert("<textarea> tag is not allowed");
             return;
     } else {
