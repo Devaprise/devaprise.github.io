@@ -1,0 +1,50 @@
+/* Containers */
+#game-container {
+	width: 300px;
+	height: 300px;
+	margin: auto;
+	border: 1px solid black;
+	padding-left: 0px;
+	padding-right: 0;
+	
+	overflow: hidden;
+}
+
+#timer-container {
+	float: right;
+}
+
+/* Start */
+#start-bttn {
+	background-color: #dddda0;
+	color: #5555ff;
+	width: 100px;
+	height: 40px;
+	font-size: 20px;
+	border-radius: 5px;
+	padding: 5px;
+	margin-top: 50px;
+}
+
+#red {
+	background-color: #ff0000;
+}
+#green {
+	background-color: #008000;
+}
+#blue {
+	background-color: #0000ff;
+}
+#yellow {
+	background-color: #eeee00;
+}
+#black {
+	background-color: #000000;
+}
+.guess {
+	width: 50px;
+	height: 50px;
+	margin: 150px 3px 5px 3px;
+	display: inline-block;
+	border-radius: 5px;
+}
