@@ -72,21 +72,6 @@
 	      <div class="page_container">
               <h1>Wanna Help?</h1>
               <h2>You can help our dreams by helping us build the mobile apps. You can also help by donating us some money. Your contributions help make us better and Bit Surfer a greater game.</h2>   
-            <div class="cb-tip-button" 
-                 data-content-location="" 
-                 data-href="//www.coinbase.com/tip_buttons/show_tip" 
-                 data-to-user-id="53f27c12b0ba09aae1000001"></div>
-                  <script type="text/javascript">
-                      !function(d,s,id) {
-                          var js,cjs=d.getElementsByTagName(s)[0],e=d.getElementById(id);
-                          if(e){return;}
-                          js=d.createElement(s);
-                          js.id=id;
-                          js.src="https://www.coinbase.com/assets/tips.js";
-                          cjs.parentNode.insertBefore(js,cjs);}(document, 'script', 'coinbase-tips');
-                  </script>
-
-
             <script src="//www.dogets.com/widget/dogets.js"></script>
             <script>
                 DogetsCom.go({
@@ -101,13 +86,21 @@
                  lbl_count: "donations",
                  lbl_amount: "DOGE"});
             </script>
-            <a href="http://devaprise.tip.me">
-                <img
-                    width="50"
-                    hegiht="50"
-                    alt="Tip Me With ChangeTip"
-                    src="https://cdn.changetip.com/img/logos/tipme_square.png?1"/>
-            </a>
+            <div id="changetip_tipme_button" 
+                 data-bid="GiiRpnkzEUicksK39zaHxQ" 
+                 data-uid="R6ez9y8aUbdCLGU5ebjRwB"></div>
+            <script>
+                (function(document,script,id){
+                    var js,
+                        r=document.getElementsByTagName(script)[0],
+                        protocol=/^http:/.test(document.location)?'http':'https';
+                    if(!document.getElementById(id)){
+                        js=document.createElement(script);
+                        js.id=id;
+                        js.src=protocol+'://www.changetip.com/public/js/widgets.js';
+                        r.parentNode.insertBefore(js,r)
+                    }}(document,'script','changetip_w_0'));
+            </script> 
   	    </div>
       </section>
         <!-- Here ends third section-->
