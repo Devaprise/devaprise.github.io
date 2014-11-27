@@ -5,29 +5,32 @@
 -->
 <!DOCTYPE html>
 <html>
-    <head>
-    	<title>What is the color of the word?</title>
-        <!--<script src="colorOfWord.js"></script>-->
-        <link rel="stylesheet" href="css/colorOfWord.css">
-        <link rel="stylesheet" href="css/bootstrap.css">
-    </head>
-    <body>
-    	<div id="game-container">
-    		<p>Score: <span id="score">0</span>
-    			<span id="timer-container">Time left: <span id="timer">10.0</span>
-    		</span> </p>
-    		<center>
-	    		<h2 id="word">[not started]</h2>
-	    		<div id="start-bttn">Start</div>
-	    		<!-- Guess blocks -->
-				<div id="green" class="guess"></div>
-				<div id="blue" class="guess"></div>
-				<div id="red" class="guess"></div>
-				<div id="yellow" class="guess"></div>
-				<div id="black" class="guess"></div>
-		</center>
-	</div>
-	<script src="js/jquery-1.11.0.js"></script>
-	<script src="js/colorOfWord.js"></script>
-    </body>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>What is the color of the word?</title>
+    <!--<script src="colorOfWord.js"></script>-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/colorOfWord.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>What is the Color of The Word?</h1>
+        <h2>A classic by Devaprise</h2>
+    </div>
+    <div id="game-container">
+        <p>Score: <span id="score">0</span>
+            <span id="timer-container">Time left: <span id="timer">10.0</span>
+        </span> </p>
+        <h2 id="word">[not started]</h2>
+        <div id="start-bttn">Start</div>
+        <!-- Guess blocks -->
+        <div id="green" class="guess"></div>
+        <div id="blue" class="guess"></div>
+        <div id="red" class="guess"></div>
+        <div id="yellow" class="guess"></div>
+        <div id="black" class="guess"></div>
+    </div>
+<script src="js/jquery-1.11.0.js"></script>
+<script src="js/colorOfWord.js"></script>
+</body>
 </html>
