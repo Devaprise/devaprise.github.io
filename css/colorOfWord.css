@@ -12,11 +12,27 @@
         75% {background-color: #99D2E4;} 
         100% {background-color: #D8CAB4;} 
 }
+@-o-keyframes pulse { 
+        0% {background-color: #45CEEF;} 
+        25% {background-color: #FFF5A5;} 
+        50% {background-color: #FFD4DA;} 
+        75% {background-color: #99D2E4;} 
+        100% {background-color: #D8CAB4;} 
+}
+@keyframes pulse { 
+        0% {background-color: #45CEEF;} 
+        25% {background-color: #FFF5A5;} 
+        50% {background-color: #FFD4DA;} 
+        75% {background-color: #99D2E4;} 
+        100% {background-color: #D8CAB4;} 
+}
 body, html{
     font-family: 'Roboto', sans-serif;
     background-color: #45CEEF; 
-    -webkit-animation: pulse 40s infinite alternate;
+    -webkit-animation: pulse 30s infinite alternate;
     -moz-animation: pulse 30s infinite alternate;
+    -o-animation: pulse 30s infinite alternate;
+    animation: pulse 30s infinite alternate;
 }
 h1,
 h2{
