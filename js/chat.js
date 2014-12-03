@@ -52,10 +52,7 @@ var postComment = function() {
     } else if((text.indexOf('<style>') !== -1 || text.indexOf('style>') !== -1) && pr === false) {
             alert("<style> tag is not allowed");
             return;
-    } else if((text.indexOf('<textarea>')!== -1 || text.indexOf('textarea>') !== -1) && pr === false){
-            alert("<textarea> tag is not allowed");
-            return;
-    }else if (text.length === 0 ) {
+    } else if (text.length === 0 ) {
         alert("Please type something into the comment box.");
         return;
     } else{
