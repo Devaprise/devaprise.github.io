@@ -3,8 +3,6 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Devaprise Chat</title>
-    <script src="https://cdn.firebase.com/js/client/1.0.15/firebase.js"></script>
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/chat.css">
     <link href='http://fonts.googleapis.com/css?family=Muli|Roboto|Lato' rel='stylesheet' type='text/css'>
@@ -16,12 +14,14 @@
         <form id="post-area">
             <textarea id="text-area" placeholder="Type your comment here!"></textarea>
             <input id="post-comment" type="button" value="Post Comment" />
-            <div id="name-changer">Name:
-                <span class="my-name"></span>
+            <div id="name-changer">
+                Name:<span class="my-name"></span>
                 <input id="changename" type="button" value="Change Name" />
             </div>
         </form>
     </div>
+    <script src='js/jquery-1.11.0.js'></script>
+    <script src="https://cdn.firebase.com/js/client/1.0.15/firebase.js"></script>
     <script src="js/chat.js"></script>
     </body>
 </html>
