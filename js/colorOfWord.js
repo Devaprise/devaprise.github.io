@@ -39,6 +39,7 @@ $(document).ready(function() {
 		$(this).slideUp();
 		gamePlaying = true;
 		timeLeft = maxTime = 5;
+		score = 0;
 		setColor();
 	});
 	
