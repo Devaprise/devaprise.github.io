@@ -1,0 +1,76 @@
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	
+	.top-content h1, .top-content .description { padding: 0 40px; }
+	
+	.more-features-box-text { margin-top: 30px; padding-left: 0; }
+	.more-features-box-text:first-child { margin-top: 0; }
+	
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+	.section-description p { padding: 0; }
+
+	.top-content h1, .top-content .description { padding: 0 40px; }
+	
+	.more-features-box { float: none; width: auto; }
+	.more-features-box-text { margin-top: 30px; padding-left: 0; text-align: center; }
+	.more-features-box-text:first-child { margin-top: 50px; }
+	.more-features-box-text-icon { float: none; display: inline-block; }
+	.more-features-box-text h3 { float: none; width: auto; margin-top: 20px; }
+	.more-features-box-text-description { float: none; width: auto; }
+
+}
+
+@media (max-width: 767px) {
+	
+	.navbar.navbar-no-bg { background: #333; background: rgba(51, 51, 51, 0.9); }
+	.navbar-brand { margin-left: 15px; }
+	.navbar-collapse { border: 0; }
+	
+	.section-description p { padding: 0; }
+    
+    .top-content h1, .top-content .description { padding: 0; }
+    
+    .more-features-box-text { margin-top: 30px; padding-left: 0; text-align: center; }
+	.more-features-box-text:first-child { margin-top: 50px; }	
+	.more-features-box-text-icon { float: none; display: inline-block; }
+	.more-features-box-text h3 { float: none; width: auto; margin-top: 20px; }
+	.more-features-box-text-description { float: none; width: auto; }
+	
+	.screenshot-box { padding-bottom: 0; }
+    .screenshot-box:last-child { padding-bottom: 20px; }
+    
+    .pricing-box { padding-bottom: 50px; }
+    .pricing-box:last-child { padding-bottom: 20px; }
+	
+	.subscribe form input.subscribe-email, .subscribe form button { width: 95%; }
+	.subscribe form input.subscribe-email { margin-left: auto; margin-right: auto; }
+
+	.contact-form, .contact-address { text-align: center; }
+	.contact-form form input, .contact-form form textarea { margin-left: auto; margin-right: auto; }
+	
+	footer, .footer-copyright { text-align: center; }
+	.footer-copyright { padding-bottom: 15px; }
+
+}
+
+@media (max-width: 415px) {
+	
+	h1, h2 { font-size: 32px; }
+
+}
+
+
+/* Retina-ize images/icons */
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+	
+}
