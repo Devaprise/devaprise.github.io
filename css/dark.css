@@ -1,0 +1,1049 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* ---------------
+
+Sensational Fix Flat Social Icons
+Author: Jorge Calvo García
+Please read the license agreement.
+
+---------------  */
+
+
+/* --------------- TWITTER */
+
+.twitter {
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+}
+
+.twitter span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px 0;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.twitter:hover span {
+	opacity: 1;
+}
+
+
+/* --------------- LINKEDIN */
+
+.linkedin {
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -30px;
+}
+
+.linkedin span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -30px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.linkedin:hover span {
+	opacity: 1;
+}
+
+
+/* --------------- DROPBOX */
+
+.dropbox {
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -60px;
+}
+
+.dropbox span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -60px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.dropbox:hover span {
+	opacity: 1;
+}
+
+
+
+/* --------------- Pinterest */
+
+.pinterest {
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -90px;
+}
+
+.pinterest span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -90px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.pinterest:hover span {
+	opacity: 1;
+}
+
+
+
+/* --------------- Blogger */
+
+.blogger {
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -120px;
+}
+
+.blogger span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -120px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.blogger:hover span {
+	opacity: 1;
+}
+
+
+
+/* --------------- Lastfm */
+
+.lastfm {
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -150px;
+}
+
+.lastfm span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -150px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.lastfm:hover span {
+	opacity: 1;
+}
+
+
+
+/* --------------- Facebook */
+
+.facebook {
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -180px;
+}
+
+.facebook span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -180px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.facebook:hover span {
+	opacity: 1;
+}
+
+
+
+/* --------------- Dribbble */
+
+.dribbble{
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -210px;
+}
+
+.dribbble span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -210px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.dribbble:hover span {
+	opacity: 1;
+}
+
+
+
+/* --------------- Soundcloud */
+
+.soundcloud{
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -240px;
+}
+
+.soundcloud span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -240px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.soundcloud:hover span {
+	opacity: 1;
+}
+
+
+
+/* --------------- Google plus */
+
+.googleplus{
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -270px;
+}
+
+.googleplus span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -270px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.googleplus:hover span {
+	opacity: 1;
+}
+
+
+
+/* --------------- Skype */
+
+.skype{
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -300px;
+}
+
+.skype span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -300px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.skype:hover span {
+	opacity: 1;
+}
+
+
+
+/* --------------- Wordpress */
+
+.wordpress{
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -330px;
+}
+
+.wordpress span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -330px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.wordpress:hover span {
+	opacity: 1;
+}
+
+
+/* --------------- Youtube */
+
+.youtube{
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -360px;
+}
+
+.youtube span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -360px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.youtube:hover span {
+	opacity: 1;
+}
+
+
+
+/* --------------- yahoo */
+
+.yahoo{
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -390px;
+}
+
+.yahoo span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -390px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.yahoo:hover span {
+	opacity: 1;
+}
+
+
+
+/* --------------- Digg */
+
+.digg{
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -420px;
+}
+
+.digg span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -420px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.digg:hover span {
+	opacity: 1;
+}
+
+
+
+/* --------------- Youtube Classic */
+
+.youtubeclassic{
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -450px;
+}
+
+.youtubeclassic span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -450px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.youtubeclassic:hover span {
+	opacity: 1;
+}
+
+
+
+/* --------------- windowslive */
+
+.windowslive{
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -480px;
+}
+
+.windowslive span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -480px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.windowslive:hover span {
+	opacity: 1;
+}
+
+
+
+/* --------------- stumbleupon */
+
+.stumbleupon{
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -510px;
+}
+
+.stumbleupon span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -510px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.stumbleupon:hover span {
+	opacity: 1;
+}
+
+
+
+/* --------------- tumblr */
+
+.tumblr{
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -540px;
+}
+
+.tumblr span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -540px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.tumblr:hover span {
+	opacity: 1;
+}
+
+
+
+/* --------------- appdev */
+
+.appdev{
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -570px;
+}
+
+.appdev span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -570px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.appdev:hover span {
+	opacity: 1;
+}
+
+
+
+/* --------------- ebay */
+
+.ebay{
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -600px;
+}
+
+.ebay span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -600px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.ebay:hover span {
+	opacity: 1;
+}
+
+
+
+/* --------------- apple */
+
+.apple{
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -630px;
+}
+
+.apple span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -630px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.apple:hover span {
+	opacity: 1;
+}
+
+
+
+/* --------------- amazon */
+
+.amazon{
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -660px;
+}
+
+.amazon span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -660px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.amazon:hover span {
+	opacity: 1;
+}
+
+
+
+/* --------------- picassa */
+
+.picassa{
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -690px;
+}
+
+.picassa span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -690px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.picassa:hover span {
+	opacity: 1;
+}
+
+
+
+/* --------------- Behance */
+
+.behance{
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -720px;
+}
+
+.behance span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -720px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.behance:hover span {
+	opacity: 1;
+}
+
+
+
+/* --------------- Android */
+
+.android{
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -750px;
+}
+
+.android span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -750px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.android:hover span {
+	opacity: 1;
+}
+
+
+/* --------------- Paypal */
+
+.paypal{
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -780px;
+}
+
+.paypal span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -780px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.paypal:hover span {
+	opacity: 1;
+}
+
+
+/* --------------- Vimeo */
+
+.vimeo{
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -810px;
+}
+
+.vimeo span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -810px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.vimeo:hover span {
+	opacity: 1;
+}
+
+
+
+/* --------------- Instagram */
+
+.instagram{
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -840px;
+}
+
+.instagram span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -840px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.instagram:hover span {
+	opacity: 1;
+}
+
+
+
+/* --------------- deviantart */
+
+.deviantart{
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -870px;
+}
+
+.deviantart span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -870px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.deviantart:hover span {
+	opacity: 1;
+}
+
+
+
+/* --------------- Flickr */
+
+.flickr{
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -900px;
+}
+
+.flickr span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -900px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.flickr:hover span {
+	opacity: 1;
+}
+
+
+
+/* --------------- Myspace */
+
+.myspace{
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -930px;
+}
+
+.myspace span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -930px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.myspace:hover span {
+	opacity: 1;
+}
+
+
+
+/* --------------- Google Drive */
+
+.googledrive{
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -960px;
+}
+
+.googledrive span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -960px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.googledrive:hover span {
+	opacity: 1;
+}
+
+
+
+/* --------------- RSS */
+
+.rss{
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -990px;
+}
+
+.rss span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -990px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.rss:hover span {
+	opacity: 1;
+}
+
+
+
+/* --------------- themeforest */
+
+.themeforest{
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -1020px;
+}
+
+.themeforest span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -1020px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.themeforest:hover span {
+	opacity: 1;
+}
+
+
+
+/* --------------- Delicio.us */
+
+.delicious{
+	display: inline-block;
+	position: relative;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position:0 -1050px;
+}
+
+.delicious span {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:url(icons/social_icons_dark.svg) no-repeat;
+	background-position: -30px -1050px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition:    opacity 0.5s;
+	-o-transition:      opacity 0.5s;
+}
+
+.delicious:hover span {
+	opacity: 1;
+}
+
+
