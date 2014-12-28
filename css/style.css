@@ -231,9 +231,8 @@ ul.navbar-nav {
 .navbar-inverse ul.navbar-nav li a:focus { color: #e8643e; outline: 0; }
 
 .navbar-brand {
-	width: 60px;
-	background: url(../img/logo.png) left center no-repeat;
-	text-indent: -99999px;
+    color: #fff;
+    font-weight: 700;
 }
 
 
