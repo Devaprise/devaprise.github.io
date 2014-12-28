@@ -7,17 +7,18 @@
     <!-- Dem Meta Tags   -->
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Bit Surfer by Devaprise | The Devaprise Corp.</title>
 	<meta name="title" content="Bit Surfer by Devaprise | The Devaprise Corp." />
 	<meta name="description" content="Have some fun playing Devaprise's first game!" />
 	<meta content="http://www.devaprise.com/BitSurfer.html" property="og:url" />
 	<meta name="author" content="Devaprise">
-    <link rel="canonical" href="http://www.thepetedesign.com/demos/onepage_scroll_demo.html" />
     <!--  CSS and fonts!  -->
     <!-- Custom CSS -->
-    <link href="css/BitSurfer.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/dark.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+<!--    <link href="css/BitSurfer.css" rel="stylesheet">-->
     <link href='css/onepage-scroll.css' rel='stylesheet' type='text/css'>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -31,6 +32,28 @@
     </script>
 </head>
 <body>
+    <!-- Top menu -->
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-no-bg" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand scroll-link" href="hdfhgf.html">Devaprise</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="top-navbar-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="scroll-link" href="colorOfWord.html">Color of the Word?</a></li>
+                    <li><a class="scroll-link" href="http://twitter.com/Devaprise">Twitter</a></li>
+                    <li><a class="scroll-link" href="http://www.khanacademy.org/cs/bit-surfer/5713239927160832/">View on Khan Academy</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="main">
       <section class="page1">
         <div class="page_container">
@@ -64,59 +87,75 @@
         <section class="page2">
 	      <div class="page_container">
           <h1>About Bit Surfer</h1>
-          <h2>Bit Surfer was the brainchild of our founder, Chris Tapia. He gathered the rest of us to help him build this game.(Also the company, but mostly the game). It took us about two months to finish building it. We are currently working on making a mobile app version of the game.</h2>
+          <h3>Bit Surfer was the brainchild of our founder, Chris Tapia. He gathered the rest of us to help him build this game.(Also the company, but mostly the game). It took us about two months to finish building it. We are currently working on making a mobile app version of the game.</h3>
 	      </div>
       </section>
         <!-- Here ends second section-->
 	    <section class="page3">
 	      <div class="page_container">
               <h1>Wanna Help?</h1>
-              <h2>You can help our dreams by helping us build the mobile apps. You can also help by donating us some money. Your contributions help make us better and Bit Surfer a greater game.</h2>   
-            <script src="//www.dogets.com/widget/dogets.js"></script>
-            <script>
-                DogetsCom.go({
-                 wallet_address: "DPLWZLaem65CvrkaJFQoZM6fJSLzFu3VWM",
-                 currency: "dogecoin",
-                 counter: "hide",
-                 alignment: "bl",
-                 qrcode: true,
-                 auto_show: false,
-                 lbl_button: "Donate Dogecoin",
-                 lbl_address: "Donate Dogecoin to this Address:",
-                 lbl_count: "donations",
-                 lbl_amount: "DOGE"});
-            </script>
-            <div id="changetip_tipme_button" 
-                 data-bid="GiiRpnkzEUicksK39zaHxQ" 
-                 data-uid="R6ez9y8aUbdCLGU5ebjRwB"></div>
-            <script>
-                (function(document,script,id){
-                    var js,
-                        r=document.getElementsByTagName(script)[0],
-                        protocol=/^http:/.test(document.location)?'http':'https';
-                    if(!document.getElementById(id)){
-                        js=document.createElement(script);
-                        js.id=id;
-                        js.src=protocol+'://www.changetip.com/public/js/widgets.js';
-                        r.parentNode.insertBefore(js,r)
-                    }}(document,'script','changetip_w_0'));
-            </script> 
+              <h3>You can help our dreams by helping us build the mobile apps. You can also help by donating us some money. Your contributions help make us better and Bit Surfer a greater game.</h3>   
+            <div class="socials">
+                <script src="//www.dogets.com/widget/dogets.js"></script>
+                <script>
+                    DogetsCom.go({
+                     wallet_address: "DPLWZLaem65CvrkaJFQoZM6fJSLzFu3VWM",
+                     currency: "dogecoin",
+                     counter: "hide",
+                     alignment: "bl",
+                     qrcode: true,
+                     auto_show: false,
+                     lbl_button: "Donate Dogecoin",
+                     lbl_address: "Donate Dogecoin to this Address:",
+                     lbl_count: "donations",
+                     lbl_amount: "DOGE"});
+                </script>
+                <div id="changetip_tipme_button" 
+                     data-bid="GiiRpnkzEUicksK39zaHxQ" 
+                     data-uid="R6ez9y8aUbdCLGU5ebjRwB"></div>
+                <script>
+                    (function(document,script,id){
+                        var js,
+                            r=document.getElementsByTagName(script)[0],
+                            protocol=/^http:/.test(document.location)?'http':'https';
+                        if(!document.getElementById(id)){
+                            js=document.createElement(script);
+                            js.id=id;
+                            js.src=protocol+'://www.changetip.com/public/js/widgets.js';
+                            r.parentNode.insertBefore(js,r)
+                        }}(document,'script','changetip_w_0'));
+                </script> 
+            </div>
   	    </div>
+            <!-- Footer -->
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-7 footer-copyright">
+                            <p>&copy; Devaprise.</p>
+                        </div>
+                        <div class="col-sm-5 footer-social">
+        <!--                    <a href="#" class="dribbble">Dribbble<span></span></a>-->
+                            <a href="http://www.twitter.com/Devaprise" class="twitter"><span></span></a>
+                            <a href="https://plus.google.com/+DevapriseCorp/posts" class="googleplus"><span></span></a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
       </section>
         <!-- Here ends third section-->
     </div>
-    <!-- Back to Future (or so they say...)-->
-    <a class="back" href="http://www.devaprise.com">Back to Devaprise</a>
     <!-- Javascript? Me gusta-->
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery.onepage-scroll.min.js"></script>
     <script>
 	  $(document).ready(function(){
-      $(".main").onepage_scroll({
-        sectionContainer: "section",
-        loop: false,
-        responsiveFallback: false
-      });
+          $(".main").onepage_scroll({
+            sectionContainer: "section",
+            loop: false,
+            responsiveFallback: false
+          });
 		});
 	</script>
 </body>

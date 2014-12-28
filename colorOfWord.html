@@ -10,66 +10,76 @@
     <title>What is the color of the word?</title>
     <!--<script src="colorOfWord.js"></script>-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/dark.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/colorOfWord.css">
 </head>
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+<body>
+    <!-- Top menu -->
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-no-bg" role="navigation">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <!-- Add logo here -->
-                    <p class="intro-text"><img src="images/Devaprise.PNG" WIDTH="30" HEIGHT="30">DEVAPRISE</p>
-                </a>
+                <a class="navbar-brand scroll-link" href="hdfhgf.html">Devaprise</a>
             </div>
-
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#download">Play</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                    <li>
-                        <a href="http://blog.devaprise.com/">Blog</a>
-                    </li>
+            <div class="collapse navbar-collapse" id="top-navbar-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="scroll-link" href="BitSurfer.html">Bit Surfer</a></li>
+                    <li><a class="scroll-link" href="http://twitter.com/Devaprise">Twitter</a></li>
+                    <li><a class="scroll-link" href="https://raw.githubusercontent.com/Devaprise/devaprise.github.io/master/colorOfWord.html">View code with Github</a></li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
     </nav>
-    <div class="heading">
-        <h1>What is the Color of The Word?</h1>
-        <h2>A classic by <a href="index.html">Devaprise</a></h2>
-        <center><p>To play: Click on the color the word is written in, not its meaning. You get less time as the game goes on.</p></center>
+    <div class="top-content section-container">
+        <div class="inner-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="heading">
+                        <h1>What is the Color of The Word?</h1>
+                        <h2>A classic by <a href="index.html">Devaprise</a></h2>
+                        <center><p>To play: Click on the color the word is written in, not its meaning. You get less time as the game goes on.</p></center>
+                    </div>
+                    <div id="game-container">
+                        <p><span id="score">Score: <span id="score">0</span></span>
+                            <span id="timer-container">Time left: <span id="timer">10.0</span></span></p>
+                        <h2 id="word">[not started]</h2>
+                        <div id="start-bttn">Start</div>
+                        <!-- Guess blocks -->
+                        <div id="green" class="guess"></div>
+                        <div id="blue" class="guess"></div>
+                        <div id="red" class="guess"></div>
+                        <div id="yellow" class="guess"></div>
+                        <div id="black" class="guess"></div>
+                    </div>
+                    </div>
+            </div>
+        </div>
     </div>
-    <div id="game-container">
-        <p>Score: <span id="score">0</span>
-            <span id="timer-container">Time left: <span id="timer">10.0</span>
-        </span> </p>
-        <h2 id="word">[not started]</h2>
-        <div id="start-bttn">Start</div>
-        <!-- Guess blocks -->
-        <div id="green" class="guess"></div>
-        <div id="blue" class="guess"></div>
-        <div id="red" class="guess"></div>
-        <div id="yellow" class="guess"></div>
-        <div id="black" class="guess"></div>
-    </div>
-<script src="js/jquery-1.11.0.js"></script>
-<script src="js/colorOfWord.js"></script>
+        <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7 footer-copyright">
+                    <p>&copy; Devaprise.</p>
+                </div>
+                <div class="col-sm-5 footer-social">
+<!--                    <a href="#" class="dribbble">Dribbble<span></span></a>-->
+                    <a href="http://www.twitter.com/Devaprise" class="twitter"><span></span></a>
+                    <a href="https://plus.google.com/+DevapriseCorp/posts" class="googleplus"><span></span></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/colorOfWord.js"></script>
 </body>
 </html>

@@ -172,8 +172,8 @@ width: 100%;
 .main section .page_container .btns a{
 text-align: center;
 }
-.main section.page2 {
-background: #555557;
+.page2 {
+    background: #555557;
 }
 .main section.page2 > img {
 position: absolute;

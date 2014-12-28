@@ -814,3 +814,32 @@ p {
     opacity: 0;
   }
 }
+.page1 {
+    background-color:rgb(57,176,184);
+}
+
+.page2 {
+    background-color: #4CAF50;
+}
+
+.main section.page2 .page_container {
+    margin-top: 240px;
+    overflow: hidden;
+}
+.main section.page3 .page_container {
+    width: 50%;
+    margin-top: 240px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.page3 {
+    background-color: #555;
+}
+
+.main section.page1 .page_container {
+    margin-top: 100px;
+    overflow: hidden;
+}
+
