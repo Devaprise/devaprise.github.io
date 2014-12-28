@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/dark.css">
     <link rel="stylesheet" href="css/form-elements.css">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media-queries.css">
 
@@ -68,10 +69,19 @@
                         <h1 class="wow fadeInLeftBig"><strong>Devaprise</strong><br>Mission: Innovation</h1>
                         <div class="divider-1 wow fadeInUp"><span></span></div>
                         <div class="description wow fadeInLeftBig">
-                            We make <span class='mywords' data-type-words="websites, mobile apps, web apps">games</span>
+                            <h3 class="cd-headline letters type">
+                                <span>We make</span> 
+                                <span class="cd-words-wrapper waiting">
+                                    <b class="is-visible">games</b>
+                                    <b>websites</b>
+                                    <b>mobile apps</b>
+                                    <b>web apps</b>
+                                    <b>happiness</b>
+                                </span>
+		                    </h3>
                         </div>
                         <div class="top-big-link wow fadeInUp">
-                            <a class="btn btn-link-1 scroll-link" href="#features">See More</a>
+                            <a class="btn btn-link scroll-link" href="#features">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -214,7 +224,7 @@
                                 <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
                                 <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                                 <div style="position: absolute; left: -5000px;"><input type="text" name="b_d12ba0f9b3d9e19576648570d_31d567212e" tabindex="-1" value=""></div>
-                                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-default"></div>
+                                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-link"></div>
                             </div>
                         </form>
                     </div>
@@ -283,14 +293,7 @@
     <script src="js/waypoints.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/scripts.js"></script>
-    <script src='js/wordTypeErase.js'></script>
-    <script>
-        $('.mywords').wordTypeErase({
-            delayOfStart: 1400,
-            letterSpeed: 60,
-            loop: true
-        }); 
-    </script>
+    <script src="js/main.js"></script>
     <!--[if lt IE 10]>
         <script src="assets/js/placeholder.js"></script>
     <![endif]-->
