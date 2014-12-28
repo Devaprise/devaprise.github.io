@@ -520,6 +520,7 @@ ul.navbar-nav {
     width: 130px;
     height: 130px;
     margin: 0 auto;
+    padding: 10 auto;
 }
 
 .about-us-box .about-us-photo img {
