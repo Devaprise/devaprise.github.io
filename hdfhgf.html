@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+
+    <title>Bit Surfer</title> 
+    <style>
+    canvas{
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    </style>
+</head> 
+
+<body> 
+    <canvas id="main"></canvas> 
+    <script type="text/javascript" src="js/processing.min.js"></script> 
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">
+        $(window).bind("resize", function(){
+        var w = $(window).width();
+        var h = $(window).height();
+
+        $("#mycanvas").css("width", w + "px");
+        $("#mycanvas").css("height", h + "px"); 
+    });
+    </script>
+    <script type="text/javascript"> 
+        if(Processing) { 
+            var canvas = document.getElementById("main"); 
+            var pjs = new Processing(canvas); 
+
+            pjs.setup = function() { 
+                pjs.size(screen.width,screen.height); 
+                pjs.background(150); 
+            } 
+            pjs.draw = function() { 
+                pjs.text("This should be written in the same font.",10,25); 
+                pjs.text("Why is this not the case?", 10, 50); 
+                pjs.text("Allahjesusmosesbuddahvishnukrishnapomax;", 10, 75); 
+                pjs.text("help me, please!", 10, 100); 
+            } 
+            pjs.setup(); 
+            pjs.draw(); 
+        } 
+    </script> 
+</body> 
+</html>
