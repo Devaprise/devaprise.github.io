@@ -22,8 +22,7 @@ License: MIT License  (http://opensource.org/licenses/MIT)
 /************************
  *      Constants       *
  ************************/
-var FPS     = 30,
-    PAUSE   = false;
+var FPS = 30;
 
 
 var KEYS  = [],
@@ -362,8 +361,8 @@ Player.prototype.draw= function() {
     this.x = mouseX-40;
     this.y += this.yvel;
     //debug
-    fill(255, 0, 0);
-    rect(this.x+10,this.y+cos(frameCount*3)*20+mouseX*(sin(frameCount*3)-cos(frameCount*3))/(25),this.width,this.height);
+    // fill(255, 0, 0);
+    // rect(this.x+10,this.y+cos(frameCount*3)*20+mouseX*(sin(frameCount*3)-cos(frameCount*3))/(25),this.width,this.height);
 };
 Player.prototype.reset= function() { // Reset for when player dies.
     this.x = this.startX;
@@ -652,13 +651,9 @@ var Help = {
         textSize(15);
         text("Click your mouse or press the spacebar to jump", 200, 130);
         text('If you miss coins, your score goes down.',200,150);
-        button("BACK",126,350,125,35);
+        button("BACK",160,250,125,35);
         if(onButton && mouseIsPressed){
             DISPLAY.show = 'menu';
-        }
-        button("CREDITS", 92, 200,225,35);
-        if(onButton && mouseIsPressed){
-            DISPLAY.show = "credits";
         }
     }
 };
