@@ -41,6 +41,7 @@ $(document).ready(function() {
 		timeLeft = maxTime = 5;
 		score = 0;
 		setColor();
+		proof = [];
 	});
 	
 	$(".guess").click(function() {
