@@ -71,6 +71,10 @@ $(document).ready(function() {
 				gamePlaying = false;
 				$("#start-bttn").slideDown();
 			}
+			
+			if (proof.length * 100 != score) {
+				score = 0;
+			}
 		}
 	}, 100);
 });
