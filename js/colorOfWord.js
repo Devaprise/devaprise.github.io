@@ -32,7 +32,7 @@ function setColor() {
 function clearColor() {
 	realColor = fakeColor = -1;
 }
-
+var proof = [];
 $(document).ready(function() {
 	// Start
 	$("#start-bttn").click(function() {
@@ -48,6 +48,7 @@ $(document).ready(function() {
 		if (gamePlaying) {
 			var i = $(this).attr("id");
 			if (i == colors[realColor][0]) {
+				proof.push(i);
 				score += 100;
 				maxTime -= 0.1;
 				timeLeft = maxTime;
