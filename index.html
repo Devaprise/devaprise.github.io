@@ -1,314 +1,269 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Teenage web and mobile developers from the Internet.">
     <meta name="author" content="Devaprise">
     <meta name="theme-color" content="#7FFF00">
-    <title>Devaprise</title>
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,100,300,500">        
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/dark.css">
-    <link rel="stylesheet" href="css/form-elements.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media-queries.css">
 
-    <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" async defer
-        src="https://apis.google.com/js/platform.js?publisherid=112558055414964775106">
-    </script>
-    <!-- Stuff -->
-    <script src="js/modernizr.custom.js"></script>
+    <title>Devaprise</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- Custom CSS -->
+    <link href="less/grayscale.less" rel="stylesheet/less" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:100, 300, 400" rel="stylesheet" type="text/css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    
-      ga('create', 'UA-47251937-2', 'auto');
-      ga('send', 'pageview');
-    </script>
 
-    <!-- Favicon and touch icons -->
-    <link rel="shortcut icon" href="images/Devaprise.png">
-    <link rel="apple-touch-icon" href="images/Devaprise.png">
 </head>
 
-<body>
-    <!-- Top menu -->
-    <nav class="navbar navbar-inverse navbar-fixed-top navbar-no-bg" role="navigation">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand scroll-link" href="#top-content">Devaprise</a>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <img src="../img/Devaprise-Logo.png" width="30" height="30">
+                </a>
             </div>
+
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="top-navbar-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a class="scroll-link" href="#features">Features</a></li>
-                    <li><a class="scroll-link" href="#about-us">About</a></li>
-                    <li><a class="scroll-link" href="#contact">Contact</a></li>
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="BitSurfer.html">Projects</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="contact.html">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+<!--                        <a class="btn-default" href="#">Join Us</a>-->
+                    </li>
                 </ul>
             </div>
+            <!-- /.navbar-collapse -->
         </div>
+        <!-- /.container -->
     </nav>
 
-    <!-- Top content -->
-    <div class="top-content section-container">
-        <div class="inner-bg">
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-12 text">
-                        <h1 class="wow fadeInLeftBig"><strong>Devaprise</strong><br>Mission: Innovation</h1>
-                        <div class="divider-1 wow fadeInUp"><span></span></div>
-                        <div class="description wow fadeInLeftBig">
-                            <h3 class="cd-headline letters type">
-                                <span>We make</span> 
-                                <span class="cd-words-wrapper waiting">
-                                    <b class="is-visible">games</b>
-                                    <b>websites</b>
-                                    <b>mobile apps</b>
-                                    <b>web apps</b>
-                                    <b>happiness</b>
-                                </span>
-		                    </h3>
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">WE ARE <strong>DEVAPRISE.</strong></h1>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <h2 class="download-header">Our Mission</h2>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <div class="row">
+                    <div class="col-sm-4 features-box wow fadeInUp">
+                        <div class="build">
+                            <img class="image" src="img/App-Store-Icon.png">
                         </div>
-                        <div class="top-big-link wow fadeInUp">
-                            <a class="btn btn-link scroll-link" href="#features">Learn More</a>
+                        <h3>To Build</h3>
+                        <p>Games, apps, or even platforms!</p>
+                    </div>
+                    <div class="col-sm-4 features-box wow fadeInDown">
+                        <div class="gather">
+                            <img class="image" src="img/People-Icon.png">
+                        </div>
+                        <h3>To Gather</h3>
+                        <p>Young coders &amp; designers</p>
+                    </div>
+                    <div class="col-sm-4 features-box wow fadeInUp">
+                        <div class="innovate">
+                            <img class="image" src="img/Think-Icon.png">
+                        </div>
+                        <h3>To Innovate</h3>
+                        <p>Change the world!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2 class="download-header">WHO ARE WE</h2>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 about-us-box wow fadeInUp">
+                        <div class="about-us-photo">
+                            <img src="img/IMG_5202.jpeg" alt="Chris" data-at2x="images/team/IMG_5202.jpeg" height="130px">
+                        </div>
+                        <h3>Chris Tapia<br><small>Founder</small></h3>
+                        <div class="about-us-social">
+                            <a href="https://plus.google.com/u/0/b/112558055414964775106/100643548224637974915" class="googleplus"><i class="fa fa-google-plus fa-fw"></i></a>
+    <!--                        <a href="#" class="dribbble">Dribbble<span></span></a>-->
+                            <a href="https://twitter.com/Ctaps33"><i class="fa fa-twitter fa-fw"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 about-us-box wow fadeInDown">
+                        <div class="about-us-photo">
+                            <img src="img/Screenshot_2014-12-28-14-25-53-1.png" alt="Micah" data-at2x="images/team/IMG_5202.jpeg" height="130px">
+                        </div>
+                        <h3>Micah Canfield<br><small>Programmer</small></h3>
+                        <div class="about-us-social">
+                            <a href="https://plus.google.com/u/0/b/112558055414964775106/100643548224637974915" class="googleplus"><i class="fa fa-google-plus fa-fw"></i></a>
+    <!--                        <a href="#" class="dribbble">Dribbble<span></span></a>-->
+                            <a href="https://github.com/Micah3198"><i class="fa fa-github fa-fw"></i></a>
+                            <a href="#"><i class="fa fa-twitter fa-fw"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 about-us-box wow fadeInUp">
+                        <div class="about-us-photo">
+                            <img src="img/Place-DP-Here.png">
+                        </div>
+                        <h3>William Hu<br><small>Creative Director</small></h3>
+                        <div class="about-us-social">
+                            <a href="#"><i class="fa fa-google-plus fa-fw"></i></a>
+                            <a href="https://github.com/superwilliamhu"><i class="fa fa-github fa-fw"></i></a>
+    <!--                        <a href="#" class="dribbble">Dribbble<span></span></a>-->
+    <!--                        <a href="#" class="twitter">Twitter<span></span></a>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 about-us-box wow fadeInUp">
+                       <div class="about-us-photo">
+                        <img src="img/Place-DP-Here.png">
+                        </div>
+                        <h3>Virus KA<br><small>Co-founder</small></h3>
+                        <div class="about-us-social">
+    <!--                        <a href="#" class="googleplus">Google Plus<span></span></a>-->
+                            <a href="#"><i class="fa fa-github fa-fw"></i></a>
+                            <a href="https://dribbble.com/VirusKA"><i class="fa fa-dribbble fa-fw"></i></a>
+                            <a href="idrissdimson@outlook.com"><i class="fa fa-skype fa-fw"></i></a>
+    <!--                        <a href="#" class="twitter">Twitter<span></span></a>-->
+                        </div>
+                    </div>
+                    <div class="col-sm-4 about-us-box wow fadeInDown">
+                        <div class="about-us-photo">
+                            <img src="img/Place-DP-Here.png">
+                        </div>
+                        <h3>Thomas L.<br><small>Programmer</small></h3>
+                        <div class="about-us-social">
+    <!--                        <a href="#" class="googleplus">Google Plus<span></span></a>-->
+<!--
+                            <a href="#"><i class="fa fa-github fa-fw"></i></a>
+                            <a href="https://dribbble.com/VirusKA"><i class="fa fa-dribbble fa-fw"></i></a>
+                            <a href="idrissdimson@outlook.com"><i class="fa fa-skype fa-fw"></i></a>
+-->
+    <!--                        <a href="#" class="twitter">Twitter<span></span></a>-->
+                        </div>
+                    </div>
+                    <div class="col-sm-4 about-us-box wow fadeInUp">
+                        <div class="about-us-photo">
+                            <img src="img/Place-DP-Here.png">
+                        </div>
+                        <h3>Marco Merlini<br><small>Programmer</small></h3>
+                        <div class="about-us-social">
+<!--
+                            <a href="#"><i class="fa fa-google-plus fa-fw"></i></a>
+                            <a href="#"><i class="fa fa-github fa-fw"></i></a>
+-->
+    <!--                        <a href="#" class="dribbble">Dribbble<span></span></a>-->
+    <!--                        <a href="#" class="twitter">Twitter<span></span></a>-->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Features -->
-    <div class="features-container section-container">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 features section-description wow fadeIn">
-                    <h2>About Devaprise</h2>
-                    <div class="divider-1 wow fadeInUp"><span></span></div>
-                    <p>
-                        <strong>Devaprise</strong> is a young developer team that originated on KA. We have a fun and strong core of 6 people, but we have a bunch of little 'helpers' who help us with projects. Our oldest member is 19, so we are a young team. Don't underestimate us, because we have a lot of experience between all of us.
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 features-box wow fadeInUp">
-                    <h3>Games</h3>
-                    <p>Our team's root are from making games. We make dozens of little JavaScript games. Play some of our games <a href="BitSurfer.html">here</a> and <a href="colorOfWord.html">here</a>.</p>
-                </div>
-                <div class="col-sm-4 features-box wow fadeInDown">
-                    <h3>Websites</h3>
-                    <p>As you can see, we make websites. :) We program in HTML, CSS, LESS, Javascript, and JQuery. We also make web apps using Meteor and Node.js. <a href="http://thebigbookoflatin.github.io">Like this one</a></p>
-                </div>
-                <div class="col-sm-4 features-box wow fadeInUp">
-                    <h3>Mobile Apps</h3>
-                    <p>We are working on making our first game soon! We are learning Objective-C, Swift, and Java.</p>
-                </div>
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 wow fadeInDown">
+                <h2 class="download-header">Little History</h2>
+                <p>Devaprise is a young developer team that originated on Khan Academy. We have a strong core of 6 people, but 
+we have a bunch of little 'helpers' who help us with projects. We have members from age 14 to age 19, so we are 
+a young team. However, please do not underestimate us, because we are all experienced in all sort of areas. We 
+as a team will continue to strive to produce top apps, games, and softwares. What matters to us the most is not 
+our history, but our future :)</p>
             </div>
         </div>
-    </div>
-
-    <!-- About us -->
-    <div class="about-us-container section-container">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 about-us section-description wow fadeIn">
-                    <h2>About our team</h2>
-                    <div class="divider-1 wow fadeInUp"><span></span></div>
-                    <p>
-                        We have about 15 people working on Devaprise, but we have a core of six awesome people.
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 about-us-box wow fadeInUp">
-                    <div class="about-us-photo">
-                        <img src="images/team/IMG_5202.jpeg" alt="Chris" data-at2x="images/team/IMG_5202.jpeg" height="130px">
-                    </div>
-                    <h3>Chris Tapia<br><small>Founder</small></h3>
-                    <p>Chris is the leader and the big boss. He invented the game Bit Surfer.</p>
-                    <div class="about-us-social">
-                        <a href="https://plus.google.com/u/0/b/112558055414964775106/100643548224637974915" class="googleplus">Google Plus<span></span></a>
-<!--                        <a href="#" class="dribbble">Dribbble<span></span></a>-->
-                        <a href="https://twitter.com/Ctaps33" class="twitter">Twitter<span></span></a>
-                    </div>
-                </div>
-                <div class="col-sm-4 about-us-box wow fadeInDown">
-                    <div class="about-us-photo">
-<!--                        <img src="assets/img/team/2.jpg" alt="" data-at2x="assets/img/team/2.jpg">-->
-                    </div>
-                    <h3>Virus KA<br><small>Co-founder</small></h3>
-                    <p>Virus is the handiman. He had a hand in creating anything with a Devaprise logo on it.</p>
-                    <div class="about-us-social">
-<!--                        <a href="#" class="googleplus">Google Plus<span></span></a>-->
-                        <a href="https://dribbble.com/VirusKA" class="dribbble">Dribbble<span></span></a>
-                        <a href="idrissdimson@outlook.com" class="skype">Skype<span></span></a>
-<!--                        <a href="#" class="twitter">Twitter<span></span></a>-->
-                    </div>
-                </div>
-                <div class="col-sm-4 about-us-box wow fadeInUp">
-                    <div class="about-us-photo">
-<!--                        <img src="assets/img/team/3.jpg" alt="" data-at2x="assets/img/team/3.jpg">-->
-                    </div>
-                    <h3>Thomas L.<br><small>Chief Programmer</small></h3>
-                    <p>Thomas is the web dev of the team. He helps make the Devaprise games.</p>
-                    <div class="about-us-social">
-<!--                        <a href="#" class="googleplus">Google Plus<span></span></a>-->
-<!--                        <a href="#" class="dribbble">Dribbble<span></span></a>-->
-<!--                        <a href="#" class="twitter">Twitter<span></span></a>-->
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 about-us-box wow fadeInLeftBig">
-                    <div class="about-us-photo">
-                        <img src="images/team/Screenshot_2014-12-28-14-25-53-1.png" alt="Micah" data-at2x="assets/img/team/3.jpg">
-                    </div>
-                    <h3>Micah Canfield<br><small>Ideas Manager</small></h3>
-                    <p>Micah is another web dev. He also helped make games.</p>
-                    <div class="about-us-social">
-<!--                        <a href="#" class="googleplus">Google Plus<span></span></a>-->
-<!--                        <a href="#" class="dribbble">Dribbble<span></span></a>-->
-                        <a href="https://twitter.com/Micah_Canfield" class="twitter">Twitter<span></span></a>
-                    </div>
-                </div>
-                <div class="col-sm-4 about-us-box wow fadeInLeftBig">
-                    <div class="about-us-photo">
-<!--                        <img src="assets/img/team/3.jpg" alt="" data-at2x="assets/img/team/3.jpg">-->
-                    </div>
-                    <h3>William Hu<br><small>Creative Director</small></h3>
-                    <p>Will is our designer. He helped design our websites.</p>
-                    <div class="about-us-social">
-<!--                        <a href="#" class="googleplus">Google Plus<span></span></a>-->
-                        <a href="https://dribbble.com/williamhu" class="dribbble">Dribbble<span></span></a>
-                        <a href="https://twitter.com/superwilliamhu" class="twitter">Twitter<span></span></a>
-                    </div>
-                </div>
-                <div class="col-sm-4 about-us-box wow fadeInLeftBig">
-                    <div class="about-us-photo">
-<!--                        <img src="assets/img/team/3.jpg" alt="" data-at2x="assets/img/team/3.jpg">-->
-                    </div>
-                    <h3>Marco Merlini<br><small>Senior Developer</small></h3>
-                    <p>Marco is another dev. He helped with ideas.</p>
-                    <div class="about-us-social">
-<!--                        <a href="#" class="googleplus">Google Plus<span></span></a>-->
-<!--                        <a href="#" class="dribbble">Dribbble<span></span></a>-->
-<!--                        <a href="#" class="twitter">Twitter<span></span></a>-->
-                    </div>
-                </div>
+    </section>
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                
             </div>
         </div>
-    </div>
-
-    <!-- Subscription form -->
-    <div class="subscribe-container section-container">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 subscribe section-description wow fadeIn">
-                    <h2>Email updates</h2>
-                    <p>Sign up now to our newsletter to receive the latest news, updates and special offers:</p>
-                    <!-- Begin MailChimp Signup Form -->
-                    <div id="mc_embed_signup">
-                        <form action="//devaprise.us9.list-manage.com/subscribe/post?u=d12ba0f9b3d9e19576648570d&amp;id=31d567212e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                            <div id="mc_embed_signup_scroll">
-                                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                <div style="position: absolute; left: -5000px;"><input type="text" name="b_d12ba0f9b3d9e19576648570d_31d567212e" tabindex="-1" value=""></div>
-                                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-link"></div>
-                            </div>
-                        </form>
-                    </div>
-                    <!--End mc_embed_signup-->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Contact us -->
-    <div class="contact-container section-container section-container-full-bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 contact section-description wow fadeIn">
-                    <h2>Contact us</h2>
-                    <div class="divider-1 wow fadeInUp"><span></span></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6 contact-address wow fadeInLeft">
-                    <h3>Contact details</h3>
-                    <p class="contact-address-description">
-                        You can reach us in many different ways, including:
-                    </p>
-                    <p><i class="fa fa-map-marker"></i>Twitter: @Devaprise</p>
-                    <p><i class="fa fa-phone"></i>Skype: live:laxsmith33</p>
-                    <p><i class="fa fa-envelope"></i>Email: <a href="mailto:devaprise@outlook.com">devaprise@outlook.com</a></p>
-                </div>
-                <div class="col-sm-6 contact-form wow fadeInUp">
-                    <h3>Follow us on Twitter</h3>
-                    <a class="twitter-timeline" href="https://twitter.com/Devaprise" data-widget-id="501069064454668289">Tweets by @Devaprise</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="scroll-page">
-                        <a class="scroll-link" href="#top-content"><i class="fa fa-chevron-up"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    </section>
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-7 footer-copyright">
-                    <p>&copy; Devaprise.</p>
-                </div>
-                <div class="col-sm-5 footer-social">
-<!--                    <a href="#" class="dribbble">Dribbble<span></span></a>-->
-                    <a href="http://www.twitter.com/Devaprise" class="twitter"><span></span></a>
-                    <a href="https://plus.google.com/+DevapriseCorp/posts" class="googleplus"><span></span></a>
-                </div>
-            </div>
+        <div class="container text-left wow fadeInUp">
+            <p>Copyright &copy; 2015 Devaprise</p>
         </div>
     </footer>
 
-    <!-- Javascript -->
+    <!-- jQuery -->
     <script src="js/jquery-1.11.1.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+    
+    <!--  Fun stuff  -->
     <script src="js/jquery.backstretch.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/retina-1.1.0.min.js"></script>
     <script src="js/waypoints.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/scripts.js"></script>
     <script src="js/main.js"></script>
-    <!--[if lt IE 10]>
-        <script src="assets/js/placeholder.js"></script>
-    <![endif]-->
+    
+    <!--  LESS generator  -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.2.0/less.min.js"></script>
 </body>
+
 </html>

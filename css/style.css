@@ -1,4 +1,5 @@
 body {
+    background-color: #eee;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     color: #000;
@@ -106,7 +107,7 @@ img { max-width: 100%; }
 	margin-top: 60px;
 	font-size: 36px;
 }
-.scroll-page a { color: #fff; }
+.scroll-page a {  }
 .scroll-page a:hover, .scroll-page a:focus, .scroll-page a:active { outline: 0; opacity: 0.6; color: #fff; }
 
 
@@ -587,7 +588,7 @@ ul.navbar-nav {
 	vertical-align: middle;
 }
 
-.contact-address a, .contact-address a:focus { color: #fff; }
+.contact-address a, .contact-address a:focus {  }
 .contact-address a:hover { color: #fff; border-bottom: 1px dotted #fff; }
 
 
@@ -611,7 +612,6 @@ footer {
 .footer-copyright a:hover { color: #fff; border-bottom: 1px dotted #fff; }
 
 p {
-    color: #fff;
     font-weight: 300;
 }
 
