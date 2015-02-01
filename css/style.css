@@ -831,4 +831,8 @@ p {
     margin-top: 100px;
     overflow: hidden;
 }
-
+.btn{
+    width: 100px;
+    height: 40px;
+    border-radius: 25px;
+}
