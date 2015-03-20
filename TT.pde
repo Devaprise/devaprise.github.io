@@ -232,7 +232,7 @@ void setup() {  // this is run once.
     //  size(360,540);
     //  scal=0.5;
     //}
-    //size(720, 1080);
+    size(720, 1080);
     
     // limit the number of frames per second
     frameRate(60);
