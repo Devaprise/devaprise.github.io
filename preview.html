@@ -1,10 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
     <head>
-        <title>Targo Tap</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="inc/TimeCircles.css" />
+        <link href="//fonts.googleapis.com/css?family=Lato:100, 300, 400" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <script src="js/processing.min.js"></script>
-        <canvas data-processing-sources="TT.pde"></canvas>
+        <div class="container">
+            <h1>Targo Tap</h1>
+            <h2>Coming On:</h2>
+            <div id="DateCountdown" data-date="2015-03-31 12:00:00" style="width: 500px; height: 125px; padding: 0px; margin-left: auto; margin-right: auto;"></div>
+        </div>
+        <footer>
+            <div class="container text-left wow fadeInUp">
+                <p>Copyright &copy; 2015 <a href="index.html">Devaprise</a></p>
+            </div>
+        </footer>
+        <script type="application/javascript" src="js/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="inc/TimeCircles.js"></script>
+        <script>
+            $("#DateCountdown").TimeCircles();
+            $("#CountDownTimer").TimeCircles({ time: { Days: { show: false }, Hours: { show: false } }});
+            $("#PageOpenTimer").TimeCircles();
+            
+            var updateTime = function(){
+                var date = $("#date").val();
+                var time = $("#time").val();
+                var datetime = date + ' ' + time + ':00';
+                $("#DateCountdown").data('date', datetime).TimeCircles().start();
+            }
+            $("#date").change(updateTime).keyup(updateTime);
+            $("#time").change(updateTime).keyup(updateTime);
+
+        </script>       
     </body>
 </html>
