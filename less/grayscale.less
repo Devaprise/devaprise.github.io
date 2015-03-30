@@ -30,15 +30,14 @@ h3{
 }
 
 p {
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 40px;
+    font-size: 18px;
+    line-height: 1.5;
 }
 
 @media(min-width:767px) {
     p {
-        font-size: 21px;
-        font-weight: 400;
+        font-size: 20px;
+        font-weight: 300;
         line-height: 1.6;
     }
 }
@@ -60,8 +59,8 @@ a {
 }
 
 .navbar-custom {
-    color: #fff;
     margin-bottom: 0;
+    border-bottom: 1px solid fade(@light, 30%);
     text-transform: uppercase;
     font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
     background-color: @dark;
@@ -252,6 +251,7 @@ a {
     &:hover,
     &:focus {
         border: 1px solid @primary;
+        outline: none;
         color: @dark;
         background-color: @primary;
     }
@@ -283,10 +283,9 @@ ul.banner-social-buttons {
 footer {
     background-color: @dark;
     color: @light;
-    padding: 20px 0;
+    padding: 50px 0;
     p {
         margin: 0;
-        font-size: 15px;
     }
 }
 
@@ -347,10 +346,4 @@ body {
     border-radius: 35px;
     width: 125px;
     height: 125px;
-}
-
-.image {
-    width: 70px;
-    height: 65px;
-    margin-top: 20%;
 }
