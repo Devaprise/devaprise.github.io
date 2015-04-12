@@ -371,6 +371,7 @@ img::-moz-selection {
 }
 
 .build {
+    margin-left: 25%;
     background-color: #51d60d;
     border-radius: 35px;
     width: 125px;
@@ -378,6 +379,7 @@ img::-moz-selection {
 }
 
 .gather {
+    margin-left: 25%;
     background-color: #f5533e;
     border-radius: 35px;
     width: 125px;
@@ -385,6 +387,7 @@ img::-moz-selection {
 }
 
 .innovate {
+    margin-left: 25%;
     background-color: #41a5fe;
     border-radius: 35px;
     width: 125px;
