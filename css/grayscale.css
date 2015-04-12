@@ -390,3 +390,7 @@ img::-moz-selection {
     width: 125px;
     height: 125px;
 }
+
+.image {
+    margin-top: 20%;
+}
